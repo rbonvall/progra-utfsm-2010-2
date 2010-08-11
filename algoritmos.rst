@@ -13,7 +13,7 @@ cómo llegar desde el inicio hasta el final.
 
 El seguir los pasos de un algoritmo se denomina **ejecutar** el algoritmo.
 
-Un algoritmo tiene tres componentes que siempre están presentes:
+Un algoritmo tiene tres componentes:
 
 .. index:: entrada, proceso, salida
 
@@ -47,7 +47,7 @@ incluso sin darse cuenta:
   El proceso es la serie de pasos para manipular los ingredientes.
   La salida es el plato terminado.
 
-* El método para multiplicar números a mano
+* El `método para multiplicar`_ números a mano
   que se aprende en el colegio es un algoritmo.
   Dado cualquier par de números enteros,
   si seguimos paso a paso el procedimiento
@@ -60,6 +60,8 @@ incluso sin darse cuenta:
   las reservas van siendo sumadas,
   y los productos intermedios son finalmente sumados.
   La salida del algoritmo es el producto obtenido.
+
+.. _método para multiplicar: http://es.wikipedia.org/wiki/Algoritmo_de_multiplicación
 
 No toda secuencia de instrucciones es un algoritmo.
 Un algoritmo debe poder seguirse
@@ -120,11 +122,18 @@ Un algoritmo debe ser descrito mediante un lenguaje
 cuyo significado sea universal.
 Primero veremos
 cuáles son los elementos básicos
-con los que un algoritmo es descrito.
-A continuación,
-aprenderemos dos medios para representar un algoritmo:
-los diagramas de flujo
-y el lenguaje de programación Fortran.
+mediante los que un algoritmo es descrito.
+Más adelante,
+aprenderemos a representar un algoritmo usando diagramas de flujo
+y finalmente a implementarlos en el computador
+usando el lenguaje Fortran.
+
+Ejercicios
+----------
+1. Busque en la web distintas definiciones de «algoritmo»,
+   y a partir de ellas elabore su propia definición breve.
+2. Piense en algoritmos que usted conozca inconscientente.
+   ¿Puede describirlos sin ambigüedades?
 
 .. include:: disqus.rst
 
