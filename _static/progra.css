@@ -1,7 +1,6 @@
 /* Originally created by Armin Ronacher for Werkzeug.
  * Adapted by Georg Brandl for sphinxdoc.
  * Adapted by Roberto Bonvallet for progra.
- * Colors from http://colorschemedesigner.com/#0831R8EllCkOE
  */
 
 @import url("basic.css");
@@ -14,7 +13,7 @@ body {
     /*letter-spacing: -0.01em;*/
     line-height: 150%;
     text-align: center;
-    background-color: #aa847c;
+    background-color: #BFD1D4;
     color: black;
     padding: 0;
     /*border: 1px solid #aaa;*/
@@ -27,7 +26,7 @@ body {
 div.document {
     background-color: white;
     text-align: left;
-    /*background-image: url(contents.png);*/
+    background-image: url(contents.png);
     background-repeat: repeat-x;
     padding-left: 3em;
     padding-right: 3em;
@@ -49,13 +48,12 @@ div.documentwrapper {
 
 div.related {
     font-size: 1em;
-    background-color: #EFE0DD;
 }
 
 div.related ul {
-    /*background-image: url(navigation.png);*/
+    background-image: url(navigation.png);
     height: 2em;
-    /*border-top: 1px solid #ddd;*/
+    border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
 }
 
@@ -75,16 +73,16 @@ div.related ul li a {
     margin: 0;
     padding: 0 5px 0 5px;
     line-height: 1.75em;
-    color: #766460;
+    color: #EE9816;
 }
 
 div.related ul li a:hover {
-    color: #61271B;
+    color: #3CA8E7;
 }
 
 div.footer {
     /*background-color: #E3EFF1;*/
-    color: #766460;
+    color: #86989B;
     padding: 3px 8px 3px 0;
     clear: both;
     font-size: 0.8em;
@@ -92,7 +90,7 @@ div.footer {
 }
 
 div.footer a {
-    color: #766460;
+    color: #86989B;
     text-decoration: underline;
 }
 
@@ -103,22 +101,21 @@ p {
 
 }
 
-a { color: #11333C; }
-a:hover { color: #4E646A; }
-a:visited { color: #3C4649; }
+a { color: navy; }
+a:hover { color: blue; }
+a:visited { color: maroon; }
 
 h1 {
     margin: 0;
     padding: 0.7em 0 0.3em 0;
     font-size: 1.5em;
-    color: #626B57;
+    color: #11557C;
 }
 
 h2 {
     margin: 1.3em 0 0.2em 0;
     font-size: 1.35em;
     padding: 0;
-    color: #879A71;
 }
 
 h3 {
