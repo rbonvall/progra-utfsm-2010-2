@@ -25,14 +25,19 @@ Compiladores y entornos de desarrollo
 Para desarrollar programas en Fortran,
 lo mínimo que se necesita es un editor de texto
 y un compilador_.
+El compilador que usaremos es g95_.
 
 Lo más conveniente es utilizar un `entorno de desarrollo`_ (IDE),
 que integra el editor de texto con el compilador.
 El entorno que usaremos en el ramo se llama Force_.
+Para instalarlo con el compilador g95,
+hay que descargar y ejecutar el archivo Force209G95Setup.exe_.
 
 .. _compilador: http://es.wikipedia.org/wiki/Compilador
+.. _g95: http://www.g95.org/
 .. _entorno de desarrollo: http://es.wikipedia.org/wiki/Entorno_de_desarrollo_integrado
 .. _Force: http://www.lepsch.com/2009/05/downloads.html
+.. _Force209G95Setup.exe: http://www.lepsch.com/downloads/Force209G95Setup.exe
 
 .. include:: disqus.rst
 
