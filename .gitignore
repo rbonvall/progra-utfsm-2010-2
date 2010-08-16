@@ -6,3 +6,4 @@ diagramas/*.pdf
 _static/jsMath
 programas/*
 !programas/*.f
+!programas/Makefile
