@@ -16,6 +16,8 @@ Contenidos del ramo
 
    info-fortran
    algoritmos
+   elementos
+   ejemplos-agosto-16
 
 Calendario del curso
 --------------------
