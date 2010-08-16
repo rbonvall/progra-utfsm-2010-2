@@ -17,3 +17,6 @@ Contenidos del ramo
    info-fortran
    algoritmos
 
+Calendario del curso
+--------------------
+.. include:: calendario.rst
