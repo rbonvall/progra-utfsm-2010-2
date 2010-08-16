@@ -61,11 +61,15 @@ y lo asociamos al nombre ``Δ``.
 La acción de guardar un valor y ponerle un nombre
 se representa como una sentencia simple llamada **asignación**,
 
-Una asignación se representa así::
+Una asignación se representa así:
+
+.. code-block:: none
 
     variable = expresión
 
-La asignación del ejemplo sería::
+La asignación del ejemplo sería:
+
+.. code-block:: none
 
     Δ = b² − 4ac
 
