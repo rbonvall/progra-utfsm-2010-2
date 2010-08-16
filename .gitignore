@@ -7,3 +7,4 @@ _static/jsMath
 programas/*
 !programas/*.f
 !programas/Makefile
+modules/*.pyc
