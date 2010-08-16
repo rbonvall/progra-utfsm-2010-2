@@ -12,6 +12,7 @@ import sys, os
 extensions = [
     #'sphinx.ext.pngmath',
     'sphinx.ext.jsmath',
+    'modules.fortran',
 ]
 
 templates_path = ['_templates']
@@ -19,7 +20,7 @@ jsmath_path = 'jsMath/easy/load.js'
 
 source_suffix = '.rst'
 master_doc = 'index'
-highlight_language = 'pascal'
+highlight_language = 'custom_fortran'
 
 project = u'Programación 2-2010'
 copyright = u'2010, Roberto Bonvallet'
