@@ -4,8 +4,12 @@ Ejemplos de la clase del 16 de agosto
 Algoritmo 1: convertir grados Fahrenheit a grados Celsius
 ---------------------------------------------------------
 * **Entrada**: número real ``f``, los grados Fahrenheit.
-* **Salida**: número real ``c``, el equivalente de ``f`` en grados Celsius.
-* **Diagrama de flujo**: (por subir)
+* **Salida**: el equivalente de ``f`` en grados Celsius.
+* **Diagrama de flujo**:
+
+  .. image:: _static/diagramas/fahrenheit.png
+     :alt: (Diagrama de flujo)
+
 * **Código**:
 
   .. literalinclude:: programas/fahrenheit.f
@@ -14,7 +18,11 @@ Algoritmo 2: calcular el valor absoluto
 ---------------------------------------
 * **Entrada**: número real ``x``.
 * **Salida**: el valor absoluto de ``x``.
-* **Diagrama de flujo**: (por subir)
+* **Diagrama de flujo**:
+
+  .. image:: _static/diagramas/valor-absoluto.png
+     :alt: (Diagrama de flujo)
+
 * **Código**:
 
   .. literalinclude:: programas/absoluto.f
