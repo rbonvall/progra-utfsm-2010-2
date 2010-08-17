@@ -4,6 +4,7 @@ diagramas/*.aux
 diagramas/*.log
 diagramas/*.pdf
 _static/jsMath
+_static/diagramas
 programas/*
 !programas/*.f
 !programas/Makefile
