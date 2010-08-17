@@ -1,0 +1,38 @@
+\documentclass{minimal}
+\usepackage[pdftex,active,tightpage]{preview}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{cmbright}
+\usepackage{tikz}
+\usetikzlibrary{calc,shapes,arrows}
+
+\renewcommand*\familydefault{\sfdefault}
+\newcommand{\assign}{\ensuremath{=}}
+
+\begin{document}
+\input{flujo}
+
+\begin{preview}
+  \begin{tikzpicture}[node distance=8ex, auto]
+    % Place nodes
+    \node [node] (start) {inicio};
+    \node [io, below of=start] (read) { Leer $x$ };
+    \node [decision, below of=read] (neg)  {¿$x < 0$?};
+    \node [stmt, below of=neg] (a-neg) { $a\assign -x$ };
+    \node [stmt, right of=a-neg, node distance=6em] (a-pos) { $a\assign x$ };
+    \node [io, below of=a-neg] (write) { Escribir $a$ };
+    \node [node, below of=write] (end) {fin};
+
+    \path [conn] (start) -- (read);
+    \path [conn] (read)  -- (neg);
+    \path [conn] (neg) -- node [very near start] {sí} (a-neg);
+    \path [conn] (neg.east) -| node [very near start] {no} (a-pos);
+    \path [conn] (a-neg)  -- (write);
+    \path [conn] (write)  -- (end);
+
+    \node [inner sep=1pt] (m) at ($ (a-neg.south)!.5!(write.north) $) {};
+    \path [conn] (a-pos.south)  |- (m);
+  \end{tikzpicture}
+\end{preview}
+
+\end{document}
