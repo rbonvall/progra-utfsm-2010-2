@@ -19,15 +19,23 @@
     \node [io, below of=start] (read) { Leer $b$ y $n$ };
     \node [stmt, below of=read] (init-r) { $r\assign 1$ };
     \node [stmt, below of=init-r] (init-i) { $i\assign 0$ };
-    \node [decision, below of=init-i] (done) { ¿$i < n$? };
+    \node [decision, below of=init-i, node distance=10ex] (done) { ¿$i < n$? };
     \node [io, below of=done, node distance=16ex] (write) { Escribir $r$ };
     \node [node, below of=write] (end) {fin};
+
+    \node [stmt, right of=done, node distance=7em]
+                                    (update-r) { $r\assign r\cdot b$ };
+    \node [stmt, below of=update-r] (update-i) { $i\assign i + 1$ };
+    \node [inner sep=1pt] (m) at ($ (init-i.south)!.5!(done.north) $) {};
 
     \path [conn] (start) -- (read);
     \path [conn] (read)  -- (init-r);
     \path [conn] (init-r) -- (init-i);
     \path [conn] (init-i) -- (done);
-    \path [conn] (done) -- (write);
+    \path [conn] (done) -- node [very near start] {no} (write);
+    \path [conn] (done) -- node [very near start] {sí} (update-r);
+    \path [conn] (update-r) -- (update-i);
+    \path [conn] (update-i.east) -- ++(1em, 0) |- (m);
     \path [conn] (write) -- (end);
   \end{tikzpicture}
 \end{preview}
