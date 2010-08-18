@@ -27,7 +27,13 @@ Contenidos del ramo
    info-fortran
    algoritmos
    elementos
+   diagramas-de-flujo
    ejemplos-agosto-16
+   tipos
+   expresiones
+   estructura-programa
+   sentencias-simples
+   sentencias-control
 
 Calendario del curso
 --------------------
