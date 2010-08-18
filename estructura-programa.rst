@@ -20,6 +20,13 @@ que represente lo que el programa hace.
 Las líneas en blanco son ignoradas.
 Se puede agregar u omitir todas las que se quiera.
 
+Las palabras que son parte del lenguaje
+pueden ser escritas indistintamente
+en mayúsculas o minúsculas.
+Por ejemplo, es válido escribir
+``PROGRAM``, ``Program`` o ``pRoGrAm``
+en vez de ``program``.
+
 El código del programa es una secuencia de
 sentencias (simples y de control).
 
