@@ -35,5 +35,12 @@ puede ser representado así:
   que en la figura están pintados de azul.
   Se puede poner varias instrucciones en un mismo bloque.
 
+Los diagramas de flujo son una manera intuitiva
+de representar la ejecución de un algoritmo,
+pero no son el producto final de la programación.
+De ahora en adelante, representaremos los algoritmos
+como código en el lenguaje de programación Fortran,
+y acudiremos a los diagramas de flujo sólo cuando sea conveniente.
+
 .. include:: disqus.rst
 
