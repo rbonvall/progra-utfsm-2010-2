@@ -13,6 +13,11 @@ Programación, 2do semestre de 2010
 
 .. _inscribir el laboratorio: http://programacion.inf.utfsm.cl/wp/2010/08/16/formulario-inscripcion-laboratorios/
 
+.. important::
+
+    El control número uno
+    será tomado en la clase del día **lunes 23**.
+
 Contenidos del ramo
 -------------------
 
