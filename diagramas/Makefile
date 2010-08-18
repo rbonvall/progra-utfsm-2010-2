@@ -9,7 +9,7 @@ pdf: $(PDFFILES)
 %.pdf: %.tex flujo.tex
 	@rubber --pdf $<
 %.png: %.pdf
-	@convert -density 1200 -scale 10\% $< $@
+	@convert -density 1200 -scale 10\% -quality 80 $< $@
 
 deploy: png
 	@mkdir -p $(DEPLOYDIR)
