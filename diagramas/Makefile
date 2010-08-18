@@ -6,7 +6,7 @@ DEPLOYDIR = ../_static/diagramas
 png: $(PNGFILES)
 pdf: $(PDFFILES)
 
-%.pdf: %.tex
+%.pdf: %.tex flujo.tex
 	@rubber --pdf $<
 %.png: %.pdf
 	@convert -density 1200 -scale 10\% $< $@
