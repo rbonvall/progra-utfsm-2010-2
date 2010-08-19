@@ -107,7 +107,8 @@ separadas por comas. Por ejemplo::
     read *, a, b, c
 
 En este caso,
-el usuario debe tipear::
+el usuario debe tipear los tres valores en la misma línea,
+separados por espacios en blanco::
 
     5 2.5 -3
 
@@ -124,6 +125,9 @@ hay que poner un símbolo ``&`` al final de la línea::
     a = 1 + x + x ** 2 + x ** 3 +  &
                 x ** 4 + x ** 5 +  &
                 x ** 6 + x ** 7
+
+En este ejemplo, ``a`` toma el resultado de la expresión
+:math:`1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7`.
             
 .. include:: disqus.rst
 
