@@ -15,9 +15,7 @@
   \begin{tikzpicture}[node distance=9ex, auto]
     % Place nodes
     \node [node] (start) {inicio};
-    \node [io, below of=start] (read) {
-        Leer $a$, $b$ y $c$
-    };
+    \node [io, below of=start] (read) { Leer $a$, $b$ y $c$ };
     \node [stmt, below of=read] (disc) {$\Delta = b^2 - 4ac$};
     \node [decision, below of=disc] (neg)  {¿$\Delta < 0$?};
     \node [decision, below of=neg]  (zero) {¿$\Delta = 0$?};
@@ -28,7 +26,6 @@
     \node [stmt, left of=pos-sol, node distance=12em] (zero-sol) {
         $x_1 = -b/2a$
     };
-
     \node [io, below of=pos-sol,
                node distance=20ex,
                text width=18em] (pos-out) {

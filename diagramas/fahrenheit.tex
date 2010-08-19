@@ -6,8 +6,6 @@
 \usepackage{tikz}
 \usetikzlibrary{calc,shapes,arrows}
 
-\newcommand{\assign}{\ensuremath{=}}
-
 \begin{document}
 \input{flujo}
 
@@ -16,14 +14,16 @@
     % Place nodes
     \node [node] (start) {inicio};
     \node [io, below of=start] (read) { Leer $f$ };
-    \node [stmt, below of=read] (convert) { $c\assign(f - 32)\cdot 5 / 9$ };
+    \node [stmt, below of=read] (convert) { $c = (f - 32)\cdot 5 / 9$ };
     \node [io, below of=convert] (write) { Escribir $c$ };
     \node [node, below of=write] (end) {fin};
 
-    \path [conn] (start) -- (read);
-    \path [conn] (read)  -- (convert);
-    \path [conn] (convert) -- (write);
-    \path [conn] (write) -- (end);
+    \path [conn]
+      (start)   edge (read)
+      (read)    edge (convert)
+      (convert) edge (write)
+      (write)   edge (end)
+    ;
   \end{tikzpicture}
 \end{preview}
 
