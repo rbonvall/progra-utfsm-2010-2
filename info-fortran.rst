@@ -1,5 +1,5 @@
-Información sobre Fortran
-=========================
+Información sobre Fortran 95
+============================
 Los siguientes recursos servirán de complemento
 al material publicado en la página del ramo.
 
