@@ -8,13 +8,6 @@ Programación, 2do semestre de 2010
 
 .. important::
 
-    Recuerden que hay plazo hasta el **miércoles 18**
-    para `inscribir el laboratorio`_.
-
-.. _inscribir el laboratorio: http://programacion.inf.utfsm.cl/wp/2010/08/16/formulario-inscripcion-laboratorios/
-
-.. important::
-
     El control número uno
     será tomado en la clase del día **lunes 23**.
 
