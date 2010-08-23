@@ -120,7 +120,7 @@ El siguiente programa ilustra la declaración de variables
 de cada uno de los tipos básicos
 y sus asignaciones usando valores literales:
 
-.. literalinclude:: programas/literales.f
+.. literalinclude:: programas/literales.f95
 
 .. include:: disqus.rst
 

@@ -48,7 +48,7 @@ Por ejemplo,
 el siguente programa felicita a alguien
 que aprobó la asignatura:
 
-.. literalinclude:: programas/aprobado.f
+.. literalinclude:: programas/aprobado.f95
 
 Condicional if-then-else
 ------------------------
@@ -74,7 +74,7 @@ Por ejemplo,
 el siguiente programa recibe como entrada un año
 e indica si es bisiesto_ o no:
 
-.. literalinclude:: programas/bisiesto.f
+.. literalinclude:: programas/bisiesto.f95
 
 .. _bisiesto: http://es.wikipedia.org/wiki/Año_bisiesto
 
@@ -107,7 +107,7 @@ el siguiente programa
 recibe un número entero como entrada
 e indica si es par o impar:
 
-.. literalinclude:: programas/par.f
+.. literalinclude:: programas/par.f95
 
 En un mismo caso es posible poner
 varios valores separados por comas.
@@ -115,7 +115,7 @@ Por ejemplo,
 el siguiente programa recibe como entrada un caracter,
 y lo clasifica como vocal, consonante, dígito o símbolo:
 
-.. literalinclude:: programas/clasifica-letras.f
+.. literalinclude:: programas/clasifica-letras.f95
 
 Ciclo do
 --------

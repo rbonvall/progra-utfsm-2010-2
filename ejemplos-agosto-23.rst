@@ -8,7 +8,7 @@ se pueden apreciar las diferencias
 entre las cuatro funciones
 para convertir de reales a enteros:
 
-.. literalinclude:: programas/conv-real-entero.f
+.. literalinclude:: programas/conv-real-entero.f95
 
 Comportamiento de la función mod
 --------------------------------
@@ -16,7 +16,7 @@ El siguiente programa ilustra
 el comportamiento de la función ``mod``
 cuando el segundo argumento es 3:
 
-.. literalinclude:: programas/mod.f
+.. literalinclude:: programas/mod.f95
 
 Comentador de notas
 -------------------
@@ -26,7 +26,7 @@ y la clasifica como pésima, mala, buena o excelente.
 
 El código es el siguiente:
 
-.. literalinclude:: programas/comenta-nota.f
+.. literalinclude:: programas/comenta-nota.f95
 
 Un par de cosas importantes de notar:
 
@@ -57,7 +57,7 @@ al valor 1.
 
 El código es el siguiente:
 
-.. literalinclude:: programas/collatz.f
+.. literalinclude:: programas/collatz.f95
 .. _secuencia de Collatz: http://en.wikipedia.org/wiki/Collatz_conjecture
 
 Números primos
@@ -74,7 +74,7 @@ Si no se encuentra ninguno, entonces el supuesto sigue siendo cierto.
 
 El código es el siguiente:
   
-.. literalinclude:: programas/es-primo.f
+.. literalinclude:: programas/es-primo.f95
 .. _primo: http://es.wikipedia.org/wiki/N%C3%BAmero_primo 
 
 Tarea

@@ -12,7 +12,7 @@ Algoritmo 1: convertir grados Fahrenheit a grados Celsius
 
 * **Código**:
 
-  .. literalinclude:: programas/fahrenheit.f
+  .. literalinclude:: programas/fahrenheit.f95
 
 Algoritmo 2: calcular el valor absoluto
 ---------------------------------------
@@ -25,7 +25,7 @@ Algoritmo 2: calcular el valor absoluto
 
 * **Código**:
 
-  .. literalinclude:: programas/absoluto.f
+  .. literalinclude:: programas/absoluto.f95
 
 Algoritmo 3: calcular potencia
 ---------------------------------
@@ -38,7 +38,7 @@ Algoritmo 3: calcular potencia
 
 * **Código**:
 
-  .. literalinclude:: programas/potencia.f
+  .. literalinclude:: programas/potencia.f95
 
 .. include:: disqus.rst
 

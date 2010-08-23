@@ -46,7 +46,7 @@ Por ejemplo,
 el siguiente programa declara tres variables,
 de las cuales dos son reales y una entera:
 
-.. literalinclude:: programas/ejemplo-declaracion.f
+.. literalinclude:: programas/ejemplo-declaracion.f95
 
 Cuando varias variables tienen el mismo tipo,
 pueden ser especificadas en la misma declaración
@@ -76,7 +76,7 @@ Por ejemplo,
 el siguiente programa calcula el area y el perimetro
 de un circulo cuyo radio fue ingresado por el usuario:
 
-.. literalinclude:: programas/circulo.f
+.. literalinclude:: programas/circulo.f95
    :linenos:
 
 En este caso,

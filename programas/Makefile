@@ -1,4 +1,4 @@
-FEXT = f
+FEXT = f95
 FORTRANFILES = $(wildcard *.$(FEXT))
 TARGETS = $(basename $(FORTRANFILES))
 FC = gfortran
