@@ -139,6 +139,72 @@ las operaciones de una expresión.
 
 (Por escribir)
 
+Llamadas a funciones
+--------------------
+.. index:: función, parámetro, argumento
+
+Una **función** es un tipo de operación
+que, en vez de estar representada por un símbolo,
+tiene un nombre.
+Los operandos de una función se llaman **parámetros** o **argumentos**.
+
+Por ejemplo, la función ``exp`` tiene un parámetro real ``x``,
+y entrega como resultado :math:`e^x`.
+
+.. index:: llamada a función
+
+Para usar la función,
+hay que poner el nombre de la función,
+y a continuación los argumentos entre paréntesis.
+Esta operación se denomina **llamar a la función**.
+
+Funciones intrínsecas
+~~~~~~~~~~~~~~~~~~~~~
+Fortran provee varias funciones que son propias del lenguaje.
+Se les denomina **funciones intrínsecas**.
+
+Las siguientes funciones
+reciben un argumento real
+y entregan un resultado real:
+
+* ``sqrt(x)``: la raíz cuadrada de ``x``.
+* ``exp(x)``: la exponencial de ``x``.
+* ``log(x)``: el logaritmo natural de ``x``.
+* ``sin(x)``: el seno de ``x``.
+* ``cos(x)``: el coseno de ``x``.
+
+La función ``abs`` puede recibir
+un argumento real o entero,
+y entrega un resultado del mismo tipo:
+
+* ``abs(x)``: el valor absoluto de ``x``.
+
+Las siguientes funciones sirven para convertir
+números reales a enteros. Se diferencian en
+el criterio que usan para redondear:
+
+* ``int(x)``: trunca el número real ``x``.
+* ``nint(x)``: aproxima el número real ``x`` al entero más cercano.
+* ``ceiling(x)``: aproxima el número real ``x`` hacia arriba.
+* ``floor(x)``: aproxima el número real ``x`` hacia abajo.
+
+En matemáticas y ciencias de la computación,
+las últimas dos funciones se llaman respectivamente `techo y piso`_,
+y se representan como :math:`⌈x⌉` y :math:`⌊x⌋`.
+
+.. _techo y piso: http://es.wikipedia.org/wiki/Funciones_de_parte_entera
+
+La función ``mod`` (módulo) recibe dos argumentos del mismo tipo,
+pero generalmente la usaremos con argumentos enteros positivos:
+
+* ``mod(a, b)``: entrega el resto de la división entre ``a`` y ``b``.
+
+Dos usos importantes de la función ``mod`` son:
+
+1. verificar si un número ``n`` es divisible por ``d``
+   usando la condición ``mod(n, d) == 0``, y
+2. obtener el último dígito de un número entero ``n``
+   usando la expresión ``mod(n, 10)``.
 
 .. include:: disqus.rst
 
