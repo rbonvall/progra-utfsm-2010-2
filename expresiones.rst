@@ -6,7 +6,7 @@ Una **expresión** es una combinación de valores y operaciones
 que, al ser evaluados, entregan un valor.
 
 Algunos elementos que pueden formar parte de una expresión son:
-valores **literales** (como ``2``, ``'hola'``, ``.TRUE.`` o ``5.7``),
+valores **literales** (como ``2``, ``'hola'``, ``.true.`` o ``5.7``),
 **variables**, **operadores** y **llamadas a funciones**.
 
 Por ejemplo,
@@ -65,14 +65,14 @@ y resultado lógico.
 
 Los operadores lógicos son:
 
-.. index:: .AND., .OR., .NOT.
+.. index:: .and., .or., .not.
 
-* **.AND.** (en español: «y») representa la conjunción lógica;
-* **.OR.** (en español: «o») representa la disyunción lógica.
-* **.NOT.** (en español: «negación») representa la negación lógica.
+* **.and.** (en español: «y») representa la conjunción lógica;
+* **.or.** (en español: «o») representa la disyunción lógica.
+* **.not.** (en español: «negación») representa la negación lógica.
 
-Los operadores ``and`` y ``or`` son binarios,
-mientras que ``not`` es unario.
+Los operadores ``.and.`` y ``.or.`` son binarios,
+mientras que ``.not.`` es unario.
 
 La siguiente tabla muestra todos los resultados posibles
 de las operaciones lógicas.
@@ -80,12 +80,12 @@ Las primeras dos columnas representan los valores de los operandos,
 y las siguientes tres, los resultados de las operaciones.
 
 =========== =========== ============= ============ ===========
-``p``       ``q``       ``p .AND. q`` ``p .OR. q`` ``.NOT. p``
+``p``       ``q``       ``p .and. q`` ``p .or. q`` ``.not. p``
 ----------- ----------- ------------- ------------ -----------
-``.TRUE.``  ``.TRUE.``  ``.TRUE.``    ``.TRUE.``   ``.FALSE.``
-``.TRUE.``  ``.FALSE.`` ``.FALSE.``   ``.TRUE.``
-``.FALSE.`` ``.TRUE.``  ``.FALSE.``   ``.TRUE.``   ``.TRUE.``
-``.FALSE.`` ``.FALSE.`` ``.FALSE.``   ``.FALSE.``
+``.true.``  ``.true.``  ``.true.``    ``.true.``   ``.false.``
+``.true.``  ``.false.`` ``.false.``   ``.true.``
+``.false.`` ``.true.``  ``.false.``   ``.true.``   ``.true.``
+``.false.`` ``.false.`` ``.false.``   ``.false.``
 =========== =========== ============= ============ ===========
 
 Operadores aritméticos

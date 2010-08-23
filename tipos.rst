@@ -86,10 +86,10 @@ El tipo **logical** permite representar los valores verdadero y falso.
 En el código,
 los valores verdadero y falso se representan respectivamente como::
 
-    .TRUE.
-    .FALSE.
+    .true.
+    .false.
 
-Al imprimirlos usando ``print``,
+al imprimirlos usando ``print``,
 estos valores aparecen por pantalla respectivamente como ``T`` y ``F``.
 
 Sobre valores de tipo ``logical`` pueden ser aplicadas
