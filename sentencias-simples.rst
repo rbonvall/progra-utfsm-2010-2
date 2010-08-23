@@ -126,7 +126,7 @@ hay que poner un símbolo ``&`` al final de la línea::
                 x ** 4 + x ** 5 +  &
                 x ** 6 + x ** 7
 
-En este ejemplo, ``a`` toma el resultado de la expresión
+En este ejemplo, la variable ``a`` toma el resultado de la expresión
 :math:`1 + x + x^2 + x^3 + x^4 + x^5 + x^6 + x^7`.
             
 .. include:: disqus.rst
