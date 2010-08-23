@@ -39,10 +39,12 @@ las subexpresiones que son evaluadas son las siguientes::
 
 Operadores
 ----------
-.. index:: operador, operador unario, operador binario, operando
+.. index:: operador
 
 Un **operador** es un símbolo en una expresión
 que representa una operación aplicada a los valores sobre los que actúa.
+
+.. index:: operador unario, operador binario, operando
 
 Los valores sobre los que actúa un operador se llaman **operandos**.
 Un **operador binario** es el que tiene dos operandos, mientras que
@@ -66,6 +68,7 @@ y resultado lógico.
 Los operadores lógicos son:
 
 .. index:: .and., .or., .not.
+.. index:: y, o, negación
 
 * **.and.** (en español: «y») representa la conjunción lógica;
 * **.or.** (en español: «o») representa la disyunción lógica.
@@ -103,7 +106,7 @@ Los operadores aritméticos binarios son:
 * la **resta** ``-``;
 * la **multiplicación** ``*``;
 * la **división** ``/``;
-* la **exponenciación** ``**``;
+* la **exponenciación** ``**`` («elevado a»).
 
 .. index:: - (unario)
 
@@ -119,6 +122,8 @@ Sus operandos son cualquier cosa que pueda ser comparada,
 y sus resultados siempre son valores lógicos.
 
 Los operadores relacionales son:
+
+.. index:: ==, /=, >, >=, <, <=
 
 * el **igual a** ``==``;
 * el **distinto a** ``/=``;
@@ -167,6 +172,8 @@ Las siguientes funciones
 reciben un argumento real
 y entregan un resultado real:
 
+.. index:: sqrt (función), exp (función), log (función), sin (función), cos (función)
+
 * ``sqrt(x)``: la raíz cuadrada de ``x``.
 * ``exp(x)``: la exponencial de ``x``.
 * ``log(x)``: el logaritmo natural de ``x``.
@@ -177,22 +184,31 @@ La función ``abs`` puede recibir
 un argumento real o entero,
 y entrega un resultado del mismo tipo:
 
+.. index:: abs (función)
+
 * ``abs(x)``: el valor absoluto de ``x``.
 
 Las siguientes funciones sirven para convertir
 números reales a enteros. Se diferencian en
 el criterio que usan para redondear:
 
+.. index:: int (función), nint (función), ceiling (función), floor (función)
+.. index:: conversión de real a entero
+
 * ``int(x)``: trunca el número real ``x``.
 * ``nint(x)``: aproxima el número real ``x`` al entero más cercano.
 * ``ceiling(x)``: aproxima el número real ``x`` hacia arriba.
 * ``floor(x)``: aproxima el número real ``x`` hacia abajo.
+
+.. index:: piso, techo
 
 En matemáticas y ciencias de la computación,
 las últimas dos funciones se llaman respectivamente `techo y piso`_,
 y se representan como :math:`⌈x⌉` y :math:`⌊x⌋`.
 
 .. _techo y piso: http://es.wikipedia.org/wiki/Funciones_de_parte_entera
+
+.. index:: mod (función), módulo, resto
 
 La función ``mod`` (módulo) recibe dos argumentos del mismo tipo,
 pero generalmente la usaremos con argumentos enteros positivos:
@@ -205,6 +221,8 @@ Dos usos importantes de la función ``mod`` son:
    usando la condición ``mod(n, d) == 0``, y
 2. obtener el último dígito de un número entero ``n``
    usando la expresión ``mod(n, 10)``.
+
+Más adelante aprenderemos cómo crear nuestras propias funciones.
 
 .. include:: disqus.rst
 

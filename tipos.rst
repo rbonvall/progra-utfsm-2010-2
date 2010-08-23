@@ -97,7 +97,7 @@ sólo operaciones lógicas.
 
 Tipo caracter
 -------------
-.. index:: caracter (tipo), integer
+.. index:: caracter (tipo), character
 
 El tipo **character** permite representar símbolos
 como letras, dígitos, puntuación, etc.
