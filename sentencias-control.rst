@@ -113,7 +113,7 @@ En un mismo caso es posible poner
 varios valores separados por comas.
 Por ejemplo,
 el siguiente programa recibe como entrada un caracter,
-e indica si es vocal, consonante o símbolo:
+y lo clasifica como vocal, consonante, dígito o símbolo:
 
 .. literalinclude:: programas/clasifica-letras.f
 
