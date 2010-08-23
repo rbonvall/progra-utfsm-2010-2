@@ -1,4 +1,5 @@
 program modulo
+    implicit none
     integer :: i
 
     do i = -10, 10
