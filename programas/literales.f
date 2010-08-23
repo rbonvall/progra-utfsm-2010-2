@@ -11,8 +11,8 @@ program literales
     x = 3.141592654
     x = 6.02e23  ! notacion cientifica
 
-    p = .TRUE.
-    p = .FALSE.
+    p = .true.
+    p = .false.
 
     c = 'a'
     c = '#'

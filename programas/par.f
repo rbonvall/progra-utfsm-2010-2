@@ -5,7 +5,7 @@ program par
     print *, 'Ingrese un numero'
     read *, n
 
-    select case (MOD(n, 2))
+    select case (mod(n, 2))
         case (0)
             print *, 'El numero es par'
         case (1)
