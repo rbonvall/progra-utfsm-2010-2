@@ -22,6 +22,7 @@ Contenidos del ramo
    estructura-programa
    sentencias-simples
    sentencias-control
+   ejemplos-agosto-23
 
 Calendario del curso
 --------------------
