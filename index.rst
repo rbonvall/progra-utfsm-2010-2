@@ -34,6 +34,7 @@ Contenidos del ramo
    sentencias-simples
    sentencias-control
    ejemplos-agosto-23
+   ejercicios-agosto-25
 
 Calendario del curso
 --------------------
