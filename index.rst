@@ -14,6 +14,7 @@ Programación, 2do semestre de 2010
       pueden encontrar `guías de ejercicios`_.
       Aunque sean de C o Pascal,
       los ejercicios son independientes del lenguaje.
+    * El control 2 será tomado el lunes 30 de agosto.
 
 .. _guías de ejercicios: http://programacion.inf.utfsm.cl/wp/recursos/
 
