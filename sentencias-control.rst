@@ -117,13 +117,174 @@ y lo clasifica como vocal, consonante, dígito o símbolo:
 
 .. literalinclude:: programas/clasifica-letras.f95
 
-Ciclo do
---------
-(Por escribir)
-
 Ciclo do-while
 --------------
-(Por escribir)
+.. index:: do while
+
+El ciclo **do-while** («hacer mientras»)
+ejecuta una secuencia de instrucciones
+mientras una condición sea verdadera.
+
+La sintaxis es::
+
+    do while (condición)
+        ! qué hacer mientras la condición se cumple
+    end do
+
+Por ejemplo,
+el siguiente código toma un número,
+y lo eleva al cuadrado hasta pasar de mil::
+
+    do while (n < 1000)
+        n = n ** 2
+    end do
+
+En general, el ciclo ``do while`` se utiliza
+cuando no se puede saber de antemano
+cuántas veces se ejecutará un ciclo,
+pero sí qué es lo que tiene que ocurrir
+para que se termine.
+
+La condición es evaluada al comienzo de cada iteración.
+Si la condición deja de ser verdadera en medio de la iteración,
+el ciclo no termina, sino que continúa hasta el final.
+Por ejemplo,
+el siguiente ciclo se ejecuta tres veces,
+a pesar de que la condición siempre deja de cumplirse
+después de la primera asignación::
+
+    n = 2
+    do while (n < 10)
+      n = n * 6
+      n = n - 9
+    end do
+
+
+Ciclo do
+--------
+.. index:: do, variable de control
+
+El ciclo **do** («hacer»)
+ejecuta una secuencia de instrucciones
+un número determinado de veces.
+Para llevar la cuenta, utiliza una **variable de control**
+que toma distintos valores en cada iteración.
+
+La sintaxis es::
+
+    do variable = inicio, final
+        ! qué hacer para cada valor de la variable de control
+    end do
+
+En la primera iteración, la variable de control
+toma el valor ``inicio``. Al final de cada iteración,
+el valor de la variable de control aumenta automáticamente.
+Cuando se pasa de largo del valor ``final``,
+el ciclo termina.
+
+Por ejemplo,
+el siguiente programa muestra los cubos
+de los números del 1 al 20::
+
+    do i = 1, 20
+        print *, i, i ** 3
+    end do
+
+Si el valor final es menor al inicial,
+el ciclo nunca es ejecutado.
+
+Además, el ciclo ``do`` puede recibir un tercer valor
+que representa el incremento de la variable de control,
+es decir, en cuánto cambiará su valor después de cada iteración.
+
+Por ejemplo,
+el siguiente programa muestra los cuadrados
+de los números *impares* menores que 100::
+
+    do i = 1, 100, 2
+        print *, i, sqrt(real(i))
+    end do
+
+También es posible hacer ciclos que van hacia atrás::
+
+    do i = 10, 1, -1
+        print *, i
+    end do
+    print *, 'Feliz an~o nuevo!'
+
+Tanto la variable de control
+como los valores inicial, final y de incremento
+deben ser de tipo entero.
+La variable de control es una variable como cualquier otra,
+y debe ser declarada apropiadamente al comienzo del programa.
+
+Un ciclo ``do`` es una manera abreviada de escribir
+un tipo especial de ciclo ``do while``.
+Los siguientes dos ciclos son equivalentes
+(cuando ``inc`` es positivo)::
+
+    do i = inicio, fin, inc
+        print *, i
+    end do
+
+    i = inicio
+    do while (i <= fin)
+        print *, i
+        i = i + inc
+    end do
+
+Salir de un ciclo
+-----------------
+.. index:: exit
+
+Además de las condiciones de término propias
+de los ciclos ``do`` y ``do while``,
+siempre es posible salir de un ciclo en cualquier momento
+usando la sentencia ``exit``.
+Lo lógico es que sea usada dentro de un condicional,
+para evitar que todos los ciclos se terminen a la primera.
+
+Por ejemplo,
+en el programa para determinar si un número es primo o no,
+la búsqueda de divisores puede ser terminada prematuramente
+apenas se encuentra el primero de ellos::
+
+    es_primo = .true.
+    do d = 2, n - 1
+        if (mod(n, d) == 0) then
+            es_primo = .false.
+            exit
+        end if
+    end do
+
+Saltar a la siguiente iteración
+-------------------------------
+.. index:: cycle
+
+La sentencia ``cycle`` se usa
+para saltar a la iteración siguiente
+sin llegar al final de la que está en curso.
+
+Por ejemplo,
+el siguiente programa muestra el seno, el coseno y la tangente
+de los números del 1 al 30, pero omitiendo los que terminan en 7::
+
+    do i = 1, 30
+        if (mod(i, 10) == 7) then
+            cycle
+        end if
+
+        print *, i
+        print *, 'Seno:    ', sin(real(i))
+        print *, 'Coseno:  ', cos(real(i))
+        print *, 'Tangente:', tan(real(i))
+    end do
+
+Ciclo infinito
+--------------
+.. index:: ciclo infinito
+
+(por escribir)
 
 .. include:: disqus.rst
 
