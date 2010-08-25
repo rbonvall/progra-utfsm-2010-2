@@ -6,6 +6,17 @@ Programación, 2do semestre de 2010
 :Página del ramo: http://programacion.inf.utfsm.cl
 :Página del paralelo: http://progra.8o.cl (redirige aquí)
 
+.. important::
+
+    * El calendario de abajo ha sido actualizado
+      con los horarios de las primeras sesiones de ayudantía.
+    * En la página del ramo
+      pueden encontrar `guías de ejercicios`_.
+      Aunque sean de C o Pascal,
+      los ejercicios son independientes del lenguaje.
+
+.. _guías de ejercicios: http://programacion.inf.utfsm.cl/wp/recursos/
+
 Contenidos del ramo
 -------------------
 
