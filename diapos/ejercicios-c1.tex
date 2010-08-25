@@ -145,4 +145,57 @@
     \lstinputlisting{../programas/cuenta-digitos.f95}
   \end{frame}
 
+  \begin{frame}[fragile]
+    Los números de Fibonacci son una secuencia que comienza
+    con los valores 0 y 1, y a continuación todos los valores
+    son la suma de los dos anteriores:
+    \begin{align*}
+      F_0 &= 0 \\
+      F_1 &= 1 \\
+      F_k &= F_{k - 2} + F_{k - 1},\quad k\ge 2
+    \end{align*}
+    Escriba un programa que muestre
+    los primeros cuarenta números de Fibonacci:
+
+    \begin{Verbatim}
+              0
+              1
+              1
+              2
+              3
+              5
+              8
+             13
+             21
+             34
+             55
+             89
+             ...
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}
+    \lstinputlisting{../programas/fibonacci.f95}
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \textbf{Tarea:}
+    escriba un programa que reciba como entrada un número entero
+    e indique si es o no un número de Fibonacci.
+
+    \begin{Verbatim}
+       Ingrese un numero entero
+      \alert{17}
+       no
+    \end{Verbatim}
+
+    \begin{Verbatim}
+       Ingrese un numero entero
+      \alert{21}
+       si
+    \end{Verbatim}
+
+\end{frame}
+
 \end{document}
