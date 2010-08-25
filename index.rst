@@ -35,6 +35,7 @@ Contenidos del ramo
    sentencias-control
    ejemplos-agosto-23
    ejercicios-agosto-25
+   ejercicios-agosto-30
 
 Calendario del curso
 --------------------
