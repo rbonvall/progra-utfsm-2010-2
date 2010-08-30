@@ -6,8 +6,8 @@ program mayor_y_menor
 
     print *, 'Ingrese', N, 'valores'
 
-    menor = +1e30
-    mayor = -1e30
+    menor = huge(x)
+    mayor = -huge(x)
     do i = 1, N
         read *, x
         if (x < menor) then
