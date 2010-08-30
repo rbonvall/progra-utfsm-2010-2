@@ -7,6 +7,21 @@ Rutee el siguiente programa (del certamen 1 del semestre pasado):
 
 .. literalinclude:: programas/ruteo-2010-1.f95
 
+Las reglas para el ruteo son:
+
+* una columna para cada variable;
+* se cambia el valor de una variable en la tabla sólo cuando:
+
+  + hay una asignación, o
+  + hay una lectura de datos (``read``);
+
+* cuando el programa hace salida (``print``),
+  se escribe en la columna «salida estándar»
+  lo que el programa imprime por pantalla;
+* cada fila de la tabla
+  corresponde a una única sentencia del programa,
+  por lo que no se ponen varios valores en una fila.
+
 El ruteo es el siguiente:
 
     +-----------+-----------+-----------+----------------------+
@@ -32,22 +47,6 @@ El ruteo es el siguiente:
     +-----------+-----------+-----------+----------------------+
     |``.FALSE.``|           |           |                      |
     +-----------+-----------+-----------+----------------------+
-
-Las reglas para el ruteo son:
-
-* una columna para cada variable;
-* se cambia el valor de una variable en la tabla sólo cuando:
-
-  + hay una asignación, o
-  + hay una lectura de datos (``read``);
-
-* cuando el programa hace salida (``print``),
-  se escribe en la columna «salida estándar»
-  lo que el programa imprime por pantalla;
-
-* cada fila de la tabla
-  corresponde a una única sentencia del programa,
-  por lo que no se ponen varios valores en una fila.
 
 Ejercicio 2: menor y mayor
 --------------------------
