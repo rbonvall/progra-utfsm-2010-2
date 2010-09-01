@@ -257,6 +257,16 @@ hay que poner el nombre de la función,
 y a continuación los argumentos entre paréntesis.
 Esta operación se denomina **llamar a la función**.
 
+Antes de que la función sea llamada,
+todos sus argumentos son evaluados::
+
+    mod(10 ** 4 + 2, 6 + 5 / 4)
+    mod( 10000  + 2, 6 + 5 / 4)
+    mod(   10002   , 6 + 5 / 4)
+    mod(   10002   , 6 +   1  )
+    mod(   10002   ,    7     )
+         6
+
 Funciones intrínsecas
 ~~~~~~~~~~~~~~~~~~~~~
 Fortran provee varias funciones que son propias del lenguaje.
@@ -315,6 +325,12 @@ Dos usos importantes de la función ``mod`` son:
    usando la condición ``mod(n, d) == 0``, y
 2. obtener el último dígito de un número entero ``n``
    usando la expresión ``mod(n, 10)``.
+
+Las funciones ``min`` y ``max`` reciben dos o más parámetros,
+que deben ser del mismo tipo, y entregan respectivamente
+el mínimo y el máximo de sus argumentos:
+
+.. literalinclude:: programas/min-max.f95
 
 Más adelante aprenderemos cómo crear nuestras propias funciones.
 
