@@ -9,11 +9,13 @@ Programación, 2do semestre de 2010
 .. important::
 
     * El calendario de abajo ha sido actualizado
-      con los horarios de las primeras sesiones de ayudantía.
+      con los horarios de las ayudantías.
     * En la página del ramo
       pueden encontrar `guías de ejercicios`_.
       Aunque sean de C o Pascal,
       los ejercicios son independientes del lenguaje.
+    * Recuerden revisar la página
+      para saber en qué sala les tocará rendir el certamen.
 
 .. _guías de ejercicios: http://programacion.inf.utfsm.cl/wp/recursos/
 
