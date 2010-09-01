@@ -142,7 +142,101 @@ es una regla que especifica
 en qué orden deben ser evaluadas
 las operaciones de una expresión.
 
-(Por escribir)
+En Fortran, la regla de precedencia es:
+primero se evalúan las operaciones aritméticas,
+luego las relacionales, y al final las lógicas.
+
+Para las operaciones aritméticas también hay
+una regla de precedencia:
+
+* primero se hacen las exponenciaciones (``**``),
+* luego las multiplicaciones y divisiones (``/``, ``*``),
+* y al final las sumas y restas (``+``, ``-``).
+
+Por ejemplo, la expresión ``2 ** 3 * 4 - 5 * 6 ** 7``
+es evaluada de la siguiente manera::
+
+    2 ** 3 * 4 - 5 * 6 ** 7
+    2 ** 3 * 4 - 5 * 279936
+       8   * 4 - 5 * 279936
+          32   - 5 * 279936
+          32   -  1399680
+            -1399648
+
+.. index:: asociatividad de operadores
+
+Además hay **reglas de asociatividad** que indican
+en qué orden se resuelven las operaciones con la misma prioridad.
+Las exponenciaciones se asocian de derecha a izquierda::
+
+    4 ** 3 ** 2
+    4 **   9
+     262144
+
+El resto de las operaciones aritméticas se asocian de izquierda a derecha::
+
+    4 - 3 - 2
+      1   - 2
+        -1
+
+Para cambiar el orden de precedencia, se puede usar paréntesis::
+
+    (4 ** 3) ** 2
+       64    ** 2
+           4096
+
+    4 - (3 - 2)
+    4 -    1
+       3
+
+    (3 + 4) * 5
+       7    * 5
+           35
+
+Si hay varios pares de paréntesis, se resuelven desde adentro hacia afuera::
+
+    (3 + (4 - 5) * ((6 - 7) / 8)) ** 2
+    (3 +    -1   * ((6 - 7) / 8)) ** 2
+    (3 +    -1   * (  -1    / 8)) ** 2
+    (3 +    -1   *        0     ) ** 2  ! división entera trunca
+    (3 +           0            ) ** 2
+               3                  ** 2
+                          9
+
+La precedencia de las operaciones lógicas es:
+
+* primero ``.and.``,
+* después ``.or.`` y ``.not.``.
+
+La asociatividad de las operaciones lógicas es
+de izquierda a derecha::
+
+    .TRUE. .or. .FALSE. .and. .FALSE. .or. .not. .TRUE.
+    .TRUE. .or.        .FALSE.        .or. .not. .TRUE.
+             .TRUE.                   .or. .not. .TRUE.
+             .TRUE.                   .or.    .FALSE.   ! no había manera de hacer el .or.
+                                 .TRUE.
+
+Para las operaciones relacionales no hay regla de precedencia,
+ya que no pueden aparecer varias de ellas
+en la misma subexpresión::
+
+    1  <  2  <  3
+     .TRUE.  <  3
+          error    ! (tipos incompatibles)
+
+
+¿Cómo se aprenden estas reglas los programadores profesionales?
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+La respuesta es: no lo hacen.
+Un buen programador siempre usa paréntesis,
+o va guardando los resultados intermedios
+en variables con nombres explicativos.
+
+De todos modos,
+es importante entender que las operaciones
+no son evaluadas en cualquier orden,
+sino que hay reglas estrictas para hacerlo.
 
 Llamadas a funciones
 --------------------
