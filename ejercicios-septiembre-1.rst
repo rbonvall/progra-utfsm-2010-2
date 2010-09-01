@@ -159,26 +159,24 @@ de los dos anteriores:
 
 .. _números de Fibonacci: http://es.wikipedia.org/wiki/N%C3%BAmero_de_Fibonacci
 
-Escriba un programa que muestre
-los primeros cuarenta números de Fibonacci.
+Escriba un programa que pregunte al usuario
+cuántos números de Fibonacci desea,
+y los muestre por pantalla:
 
 .. code-block:: none
 
-      0
-      1
-      1
-      2
-      3
-      5
-      8
-     13
-     21
-     34
-     55
-     89
-    144
-    233
-    ...
+     Cuantos numeros de Fibonacci desea?
+    10
+               0
+               1
+               1
+               2
+               3
+               5
+               8
+              13
+              21
+              34
 
 **Tarea para la casa**:
 escriba un programa que reciba como entrada un número entero
