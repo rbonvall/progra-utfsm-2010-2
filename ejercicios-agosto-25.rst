@@ -1,8 +1,8 @@
 Ejercicios de la clase del 25 de agosto
 =======================================
 
-Ejercicio 1
------------
+Ejercicio 1: promedio de tres números
+-------------------------------------
 Escriba un programa que muestre el promedio de tres números reales
 ingresados por el usuario.
 
@@ -37,8 +37,8 @@ que el código sea más claro y fácil de entender.
 En este caso, el programa es tan simple que no hay mucha diferencia
 entre una manera u otra.
 
-Ejercicio 2
------------
+Ejercicio 2: promedio de n números
+----------------------------------
 Escriba un programa que:
 
 * pregunte al usuario cuántos números ingresará,
@@ -94,8 +94,8 @@ para enfatizar que la división es una operación de números reales.
 En la práctica no es necesario, ya que si un operando es real,
 el otro es convertido automáticamente a real.
 
-Problema 3
-----------
+Problema 3: promedio de números hasta marcar el final
+-----------------------------------------------------
 Escriba un programa que:
 
 * pida al usuario que ingrese varios números,
