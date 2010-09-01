@@ -39,8 +39,8 @@ los dígitos faltantes pueden ser obtenidos
 dividiendo el número por 10::
 
     n = 142857
-    print *, n / 10       !  14285
-    print *, mod(n, 10)   !  7
+    print *,     n / 10    !  14285
+    print *, mod(n,  10)   !  7
 
 ¿Cuántas veces debe hacerse este paso?
 El computador no sabe cuántos dígitos tiene el número.
