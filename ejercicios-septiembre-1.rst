@@ -178,6 +178,73 @@ y los muestre por pantalla:
               21
               34
 
+La regla para generar los números de Fibonacci
+requiere siempre sumar los dos últimos valores.
+Por lo tanto,
+en cada etapa del procedimiento
+es necesario recordar los dos últimos números.
+Nos referiremos a ellos como el número ``actual``
+y el número ``anterior``.
+
+Los dos primeros valores son siempre 0 y 1.
+Por lo tanto,
+podemos comenzar directamente imprimiéndolos::
+
+    print *, 0
+    print *, 1
+
+Por simplicidad,
+supondremos que el usuario siempre ingresa una cantidad ``n``
+mayor que dos.
+Si queremos que el programa esté correcto en todos los casos,
+deberíamos hacer lo siguiente::
+
+    if (n > 0) then
+        print *, 0
+    end if
+    if (n > 1) then
+        print *, 1
+    end if
+
+Para generar el resto de los números,
+debemos describir el proceso
+en que ``anterior`` pasa a tomar el valor que tenía ``actual``,
+y ``actual`` pasa a tener la suma de ambos.
+
+Una aproximación ingenua sería la siguiente::
+
+    anterior = actual
+    actual = anterior + actual
+
+Este cambio es incorrecto, ya que después de la primera asignación
+``anterior`` pierde el valor que tenía previamente,
+por lo que la segunda asignación ya no hace lo que esperamos.
+
+Si cambiamos el orden de las asignaciones,
+ocurre lo mismo::
+
+    actual = anterior + actual
+    anterior = actual
+
+Ahora es el valor de ``actual`` el que se pierde antes de usarlo.
+Esta confusa situación ocurre siempre que se desea intercambiar
+el valor de dos variables.
+La manera de solucionarlo es introduciendo una variable adicional
+para guardar el resultado intermedio.
+A esta variable la denominaremos ``suma``::
+
+    suma = anterior + actual
+    anterior = actual
+    actual = suma
+
+El programa completo es el siguiente:
+
+.. literalinclude:: programas/fibonacci.f95
+
+El ciclo ``do`` parte desde 3
+porque los primeros dos valores
+ya fueron mostrados antes.
+
 **Tarea para la casa**:
 escriba un programa que reciba como entrada un número entero
 e indique si es o no un número de Fibonacci.
