@@ -107,5 +107,18 @@ Desarrolle un programa que solucione el problema de Solarrabietas:
     6 5
      Aun no termina
 
+Suma de primos con siete
+------------------------
+¿Cuál es la suma de todos los números primos menores que 100
+que tienen algún dígito 7?
+
+(Respuesta: 7 + 17 + 37 + 47 + 67 + 71 + 73 + 79 + 97 = 495)
+
+Hardy-Ramanujan
+---------------
+El *número de Hardy-Ramanujan* es el menor número entero
+que puede ser expresado como la suma de dos cubos perfectos
+de dos maneras distintas (:math:`a^3+b^3=c^3+d^3`).
+Escriba un programa que descubra este número.
 
 .. include:: disqus.rst
