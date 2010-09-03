@@ -69,6 +69,43 @@ al periodista le gustaría saber:
 * si el set todavía no termina, o
 * si el resultado es inválido (por ejemplo, 8-6 o 7-3).
 
-Desarrolle un programa que solucion el problema de Solarrabietas.
+Desarrolle un programa que solucione el problema de Solarrabietas:
+
+.. code-block:: none
+
+     Ingrese juegos ganados por A y B:
+    4 5
+     Aun no termina
+
+.. code-block:: none
+
+     Ingrese juegos ganados por A y B:
+    5 7
+     Gano B
+
+.. code-block:: none
+
+     Ingrese juegos ganados por A y B:
+    5 6
+     Aun no termina
+
+.. code-block:: none
+
+     Ingrese juegos ganados por A y B:
+    3 7
+     Invalido
+
+.. code-block:: none
+
+     Ingrese juegos ganados por A y B:
+    6 2
+     Gano A
+
+.. code-block:: none
+
+     Ingrese juegos ganados por A y B:
+    6 5
+     Aun no termina
+
 
 .. include:: disqus.rst
