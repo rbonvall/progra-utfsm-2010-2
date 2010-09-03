@@ -24,7 +24,9 @@ el usuario debe responder:
   * ``>``, si el número pensado es mayor al entregado.
 
 Por ejemplo, si yo pienso el número 82,
-la ejecución del programa se vería así::
+la ejecución del programa se vería así:
+
+.. code-block:: none
 
       El numero es  50?
      >
