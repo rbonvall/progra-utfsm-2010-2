@@ -43,6 +43,7 @@ Contenidos del ramo
    ejercicios-agosto-25
    ejercicios-agosto-30
    ejercicios-septiembre-1
+   ejercicios-c1
 
 Calendario del curso
 --------------------
