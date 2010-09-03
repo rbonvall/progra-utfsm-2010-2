@@ -121,4 +121,20 @@ que puede ser expresado como la suma de dos cubos perfectos
 de dos maneras distintas (:math:`a^3+b^3=c^3+d^3`).
 Escriba un programa que descubra este número.
 
+Pi
+--
+Desarrollar un programa que estime el valor de :math:`pi`
+usando la siguiente suma infinita:
+
+.. math::
+
+    \pi = 4\left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots\right)
+
+El programa debe detenerse cuando encuentre un término
+cuyo valor sea menor que :math:`10^{-5}`.
+
+La salida del programa debe ser simplemente algo como::
+
+    3.1416159
+
 .. include:: disqus.rst
