@@ -284,7 +284,37 @@ Ciclo infinito
 --------------
 .. index:: ciclo infinito
 
-(por escribir)
+Existe un tercer tipo de ciclo
+que no tiene ninguna condición de termino.
+Se llama **ciclo infinito**
+y la sintaxis es::
+
+    do
+        ! hacer algo
+    end do
+
+La única manera de salir de un ciclo infinito
+es usando la sentencia ``exit``.
+
+Por ejemplo,
+el siguiente código pregunta números al usuario,
+e indica si el número es par o impar,
+y termina cuando el usuario ingresa un cero::
+
+    do
+        read *, n
+
+        if (n == 0) then
+            exit
+        end if
+
+        select case (mod(n, 2))
+            case (0)
+                print *, 'Par'
+            case (1)
+                print *, 'Impar'
+        end select
+    end do
 
 .. include:: disqus.rst
 
