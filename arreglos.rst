@@ -34,7 +34,7 @@ se ha declarado un arreglo de enteros de tamaño 6,
 cuyos elementos están indexados desde el 1 hasta el 6.
 
 El ejemplo podría perfectamente estar escrito
-usando cinco variables ``a``, ``b``, ``c``, ``d``, ``e`` y ``f``
+usando seis variables ``a``, ``b``, ``c``, ``d``, ``e`` y ``f``
 para guardar las notas.
 La ventaja de usar arreglos es que se puede usar ciclos
 para recorrer todos los elementos.
