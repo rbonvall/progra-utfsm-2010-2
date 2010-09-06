@@ -28,6 +28,7 @@ Contenidos del ramo
    ejercicios-septiembre-1
    ejercicios-c1
    arreglos
+   ejemplos-septiembre-6
 
 Calendario del curso
 --------------------
