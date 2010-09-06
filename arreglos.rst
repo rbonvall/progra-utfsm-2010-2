@@ -49,7 +49,7 @@ Otra ventaja de usar arreglos
 es que el mismo programa puede ser utilizado
 para conjuntos de datos de cualquier tamaño
 sin requerir mayores modificaciones.
-El programa para promediar cinco notas
+El programa para promediar seis notas
 es exactamente igual al que se usaría para promediar treinta notas.
 Sólo basta con modificar el valor de la constante ``N``.
 
