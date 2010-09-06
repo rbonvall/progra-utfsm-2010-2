@@ -35,6 +35,8 @@ program calcular_moda
         end if
     end do
 
+    ! una vez que se tiene el índice,
+    ! se puede saber cuál de los datos es la moda
     moda = datos(indice_moda)
 
     print *, 'La moda es', moda
