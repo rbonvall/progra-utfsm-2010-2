@@ -44,6 +44,7 @@ Contenidos del ramo
    ejercicios-agosto-30
    ejercicios-septiembre-1
    ejercicios-c1
+   arreglos
 
 Calendario del curso
 --------------------
