@@ -1,0 +1,108 @@
+\documentclass[10pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{palatino}
+\usepackage{fancyvrb}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Arreglos}
+\author{
+  Roberto Bonvallet \\
+  \url{roberto.bonvallet@usm.cl} \\
+  \url{http://progra.8o.cl}
+}
+
+\lstloadlanguages{fortran}
+\lstset{language=fortran,basicstyle=\small,%
+        morestring=[b]',stringstyle=\it,showstringspaces=false}
+\fvset{formatcom=\small,frame=single,gobble=6,commandchars=\\\{\}}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}{Promedio}
+    \lstinputlisting{../programas/promedio-arreglo-0.f95}
+  \end{frame}
+
+  \begin{frame}{Promedio con arreglo}
+    \lstinputlisting{../programas/promedio-arreglo-1.f95}
+  \end{frame}
+
+  \begin{frame}{Promedio con arreglo con ciclo}
+    \lstinputlisting{../programas/promedio-arreglo-2.f95}
+  \end{frame}
+
+  \begin{frame}{Tamaño del arreglo como constante}
+    \lstinputlisting{../programas/promedio-arreglo-3.f95}
+  \end{frame}
+
+  \begin{frame}{Funciones que operan sobre arreglos}
+    \lstinputlisting{../programas/promedio-arreglo-4.f95}
+  \end{frame}
+
+  \begin{frame}{Inicialización de arreglos}
+    \lstinputlisting{../programas/dias-mes.f95}
+  \end{frame}
+
+  \begin{frame}[fragile]
+    Escriba un programa que pida diez números reales
+    y entregue el promedio y la desviación estándar.
+    \begin{align}
+      \bar x   &= \frac{1}{N} \sum_{i=1}^{N} x_i \\
+      \sigma_x &= \sqrt{\frac{1}{N-1} \sum_{i=1}^{N} (x_i - \bar x)^2}
+    \end{align}
+
+    \begin{Verbatim}
+       Ingrese 10 datos
+      \alert{3}
+      \alert{5}
+      \alert{4.1}
+      \alert{2.3}
+      \alert{6.7}
+      \alert{3.15}
+      \alert{-10}
+      \alert{4}
+      \alert{3}
+      \alert{2.1}
+       Promedio:   2.3350000    
+       Desviacion:   4.5436187
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}{Desviación estándar}
+    \lstinputlisting[basicstyle=\tiny]{../programas/desviacion-estandar.f95}
+  \end{frame}
+
+  \begin{frame}{Desviación estándar con operaciones sobre arreglos}
+    \lstinputlisting{../programas/desviacion-estandar-2.f95}
+  \end{frame}
+
+  \begin{frame}[fragile]{Tarea}
+    Escriba un programa que pida diez números enteros
+    e indique cuál es el que más se repite.
+
+    \begin{Verbatim}
+       Ingrese 10 enteros
+      \alert{3}
+      \alert{5}
+      \alert{3}
+      \alert{4}
+      \alert{1}
+      \alert{5}
+      \alert{2}
+      \alert{5}
+      \alert{3}
+      \alert{5}
+       La moda es 5
+    \end{Verbatim}
+
+\end{frame}
+
+\end{document}
