@@ -12,7 +12,7 @@ program desviacion_estandar
     end do
 
     promedio = sum(datos) / N
-    desviacion = sum((datos - promedio) ** 2) / (N - 1)
+    desviacion = sqrt(sum((datos - promedio) ** 2) / (N - 1))
 
     print *, 'Promedio:', promedio
     print *, 'Desviacion:', desviacion

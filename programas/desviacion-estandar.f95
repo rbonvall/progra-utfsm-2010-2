@@ -26,7 +26,7 @@ program desviacion_estandar
         suma_cuadrados_diferencias = suma_cuadrados_diferencias + &
                                      cuadrados_diferencias(i)
     end do
-    desviacion = suma_cuadrados_diferencias / (N - 1)
+    desviacion = sqrt(suma_cuadrados_diferencias / (N - 1))
 
     print *, 'Promedio:', promedio
     print *, 'Desviacion:', desviacion
