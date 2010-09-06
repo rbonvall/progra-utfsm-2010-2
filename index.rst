@@ -6,23 +6,6 @@ Programación, 2do semestre de 2010
 :Página del ramo: http://programacion.inf.utfsm.cl
 :Página del paralelo: http://progra.8o.cl (redirige aquí)
 
-.. important::
-
-    * En la página del ramo
-      pueden encontrar `guías de ejercicios`_.
-      Aunque sean de C o Pascal,
-      los ejercicios son independientes del lenguaje.
-    * Instrucciones para el certamen:
-
-      * Revisar `en qué sala`_ les toca.
-      * Llevar alguna identificación.
-        Si no lo hacen, no pueden rendir el certamen.
-      * En el ruteo, se pone un valor por fila.
-        Si no, está malo.
-
-.. _guías de ejercicios: http://programacion.inf.utfsm.cl/wp/recursos/
-.. _en qué sala: http://programacion.inf.utfsm.cl/wp/wp-content/uploads/IWI131.2S.2010-Salas-C1.pdf
-
 Contenidos del ramo
 -------------------
 
