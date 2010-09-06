@@ -1,6 +1,6 @@
 program calcular_moda
     implicit none
-    integer, parameter :: N = 10
+    integer, parameter :: N = 20
     integer, dimension(N) :: datos, cuentas
     integer :: indice_moda, moda, maxima_cuenta
     integer :: i, j

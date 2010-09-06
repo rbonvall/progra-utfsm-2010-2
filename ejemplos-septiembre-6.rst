@@ -35,7 +35,30 @@ el código queda mucho más sencillo:
 Tarea: cálculo de la moda
 -------------------------
 Escribir un programa que reciba como entrada veinte números enteros,
-y que entregue como salida cuál es `el número que aparece más veces`_.
+y que entregue como salida cuál es `el número que aparece más veces`_::
+
+     Ingrese 20 datos
+    7
+    4
+    90
+    7
+    17
+    90
+    5
+    4
+    -20
+    -20
+    4
+    90
+    10
+    17
+    66
+    90
+    12
+    90
+    3
+    4
+     La moda es 90
 
 .. _el número que aparece más veces: http://es.wikipedia.org/wiki/Moda_%28estad%C3%ADstica%29
 .. _desviación estándar: http://es.wikipedia.org/wiki/Desviaci%C3%B3n_est%C3%A1ndar
