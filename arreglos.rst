@@ -158,5 +158,31 @@ que tienen los meses del año:
 
 .. literalinclude:: programas/dias-mes.f95
 
+Operaciones sobre arreglos
+--------------------------
+.. index:: sum (función)
+
+Hay algunas operaciones que pueden ser usadas sobre arreglos.
+Por ejemplo, la función ``sum`` recibe un arreglo como parámetro
+y entrega como resultado la suma de los elementos del arreglo::
+
+    real, dimension(5) :: a = (/6, 1, -4, 3, 0/)
+
+    print *, sum(a)    ! la salida es 6.0
+
+Si una operación binaria es aplicada sobre
+un arreglo y un valor escalar,
+entonces la operación es aplicada sobre todos los elementos del arreglo.
+Por ejemplo, si ``a`` es un arreglo,
+entonces el resultado de la expresión ``a * 2``
+es el arreglo cuyos valores son el doble
+del elemento respectivo de ``a``.
+
+Si una operación binaria es aplicada sobre dos arreglos,
+entonces la operación es aplicada elemento a elemento.
+Por ejemplo, si ``a`` y ``b`` son arreglos,
+``a * b`` es el arreglo de los productos de los elementos respectivos
+de ``a`` y ``b``.
+
 .. include:: disqus.rst
 
