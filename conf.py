@@ -9,6 +9,8 @@ import sys, os
 
 # -- General configuration -----------------------------------------------------
 
+sys.path.insert(0, '.')
+
 extensions = [
     #'sphinx.ext.pngmath',
     'sphinx.ext.jsmath',
