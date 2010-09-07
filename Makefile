@@ -13,7 +13,9 @@ ALLSPHINXOPTS   = -d _build/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 
 DEPLOYDIR = $(HOME)/public_html/progra-utfsm-2010-2
 
-.PHONY: help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest deploy
+.PHONY: all help clean html dirhtml pickle json htmlhelp qthelp latex changes linkcheck doctest deploy
+
+all: html
 
 help:
 	@echo "Please use \`make <target>' where <target> is one of"
