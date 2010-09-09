@@ -6,7 +6,7 @@ program cuadrado_magico
     integer :: suma_diagonal_1, suma_diagonal_2
     integer :: i, j
 
-    print *, 'Ingrese el cuadrado magico'
+    print *, 'Ingrese el cuadrado'
     do i = 1, N
         read *, (cuadrado(i, j), j = 1, N)
     end do
