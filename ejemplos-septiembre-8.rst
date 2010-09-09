@@ -54,12 +54,12 @@ si un cuadrado de números es mágico o no.
 
 .. code-block:: none
    
-     Ingrese el cuadrado
+     Ingrese el cuadrado:
      1 15 14  4
     12  6  7  9
      8 10 11  5
     13  3  2 16
-     es magico
+     El cuadrado es magico.
 
 Para resolver este problema,
 hay que hacerlo en dos pasos:

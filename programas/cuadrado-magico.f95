@@ -9,7 +9,7 @@ program cuadrado_magico
     logical :: es_magico
 
     ! entrada
-    print *, 'Ingrese el cuadrado'
+    print *, 'Ingrese el cuadrado:'
     do i = 1, N
         read *, (cuadrado(i, j), j = 1, N)
     end do
@@ -47,8 +47,8 @@ program cuadrado_magico
 
     ! salida
     if (es_magico) then
-        print *, 'es magico'
+        print *, 'El cuadrado es magico.'
     else
-        print *, 'no es magico'
+        print *, 'El cuadrado no es magico.'
     end if
 end program cuadrado_magico

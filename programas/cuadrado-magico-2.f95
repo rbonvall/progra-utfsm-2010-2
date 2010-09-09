@@ -6,7 +6,7 @@ program cuadrado_magico
     integer :: suma_diagonal_1, suma_diagonal_2
     integer :: i, j
 
-    print *, 'Ingrese el cuadrado'
+    print *, 'Ingrese el cuadrado:'
     do i = 1, N
         read *, (cuadrado(i, j), j = 1, N)
     end do
@@ -23,8 +23,8 @@ program cuadrado_magico
     if (suma_diagonal_1 == suma_diagonal_2      .and. &
             all(suma_diagonal_1 == sumas_filas) .and. &
             all(suma_diagonal_1 == sumas_columnas)) then
-        print *, 'es magico'
+        print *, 'El cuadrado es magico.'
     else
-        print *, 'no es magico'
+        print *, 'El cuadrado no es magico.'
     end if
 end program cuadrado_magico
