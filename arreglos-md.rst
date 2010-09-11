@@ -1,3 +1,0 @@
-Arreglos multidimensionales
-===========================
-(Por escribir)

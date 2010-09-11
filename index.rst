@@ -29,7 +29,6 @@ Contenidos del ramo
    ejercicios-c1
    arreglos
    ejemplos-septiembre-6
-   arreglos-md
    strings
    ejemplos-septiembre-8
 

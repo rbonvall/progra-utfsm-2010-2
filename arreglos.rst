@@ -53,93 +53,46 @@ El programa para promediar seis notas
 es exactamente igual al que se usaría para promediar treinta notas.
 Sólo basta con modificar el valor de la constante ``N``.
 
-.. Como el número de elementos de un arreglo está fijo,
-.. si queremos guardar un número arbitrario de elementos
-.. debemos crear un arreglo lo suficientemente grande
-.. y llevar la cuenta de cuántos elementos hemos asignado.
-.. La siguiente versión de nuestro ejemplo
-.. pide al usuario que ingrese un conjunto de notas,
-.. y que indique el final de la secuencia ingresando el valor ``-1``:
-.. 
-.. .. literalinclude:: programas/promedio-secuencia.pas
-..    :linenos:
-.. 
-.. La parte donde se calcula el promedio
-.. es igual que en la versión anterior.
-.. El cambio está en la parte de la entrada,
-.. ya que hay que llevar la cuenta de cuántos datos se ha ingresado,
-.. y además hay que tener cuidado de no pasarse en la capacidad del arreglo.
-.. Si el usuario termina la secuencia con ``-1``,
-.. hay que restar uno a la cantidad de elementos,
-.. ya que este valor no debe ser considerado para el cálculo del promedio.
-.. 
-.. A continuación, otro ejemplo.
-.. El siguiente programa
-.. le pide al usuario que ingrese 10 números reales,
-.. y a continuación los escribe en el orden inverso:
-.. 
-.. .. literalinclude:: programas/orden-inverso.pas
-..    :linenos:
-.. 
-.. Generalmente, los índices son números enteros
-.. que van desde uno hasta la capacidad del arreglo.
-.. También es posible usar índices con otros rangos
-.. (por ejemplo, partiendo desde cero),
-.. e incluso usando otros tipos de datos ordinales.
-.. El siguiente ejemplo muestra
-.. algunas declaraciones válidas e inválidas de arreglos::
-.. 
-..     var
-..         {válidas}
-..         a: Array[False..True] of Real;
-..         b: Array['a'..'z'] of Real;
-..         c: Array[0..9] of Real;
-..         d: Array[100..200] of Real;
-.. 
-..         {inválidas}
-..         e: Array[1000..1] of Real;
-..         f: Array[2,3,5,7,11] of Real;
-..         g: Array[0.5..9.5] of Real;
-.. 
-.. Arreglos multidimensionales
-.. ---------------------------
-.. .. index:: arreglo multidimensional
-.. 
-.. Un **arreglo multidimensional** es un arreglo
-.. cuyos elementos tienen más de un índice.
-.. 
-.. El caso más simple son los arreglos bidimensionales,
-.. que tienen dos índices, y son útiles para representar datos con formato tabular,
-.. como tablas y matrices.
-.. 
-.. Tanto en la declaración como en el uso del arreglo,
-.. los índices se ponen separados por comas.
-.. 
-.. Por ejemplo,
-.. el siguiente código permite ingresar datos numéricos
-.. en una tabla de 5 × 3 y luego mostrarla por pantalla::
-.. 
-..     program LlenarTabla;
-..     const
-..         nroFilas = 5;
-..         nroColumnas = 3;
-..     var
-..         tabla: Array[1..nroFilas, 1..nroColumnas] of Integer;
-..         i, j: Integer;
-..     begin
-..         {llenar}
-..         for i := 1 to nroFilas do
-..             for j := 1 to nroColumnas do
-..                 Read(tabla[i, j]);
-.. 
-..         {mostrar}
-..         for i := 1 to nroFilas do
-..         begin
-..             for j := 1 to nroColumnas do
-..                 Write(tabla[i, j], ' ');
-..             WriteLn;
-..         end;
-..     end.
+Arreglos multidimensionales
+---------------------------
+.. index:: arreglo multidimensional
+
+Un **arreglo multidimensional** es un arreglo
+cuyos elementos tienen más de un índice.
+
+El caso más simple son los arreglos bidimensionales,
+que tienen dos índices,
+y son útiles para representar datos con formato tabular,
+como tablas y matrices.
+
+Los arreglos multidimensionales son declarados
+indicando los tamaños a lo largo de cada una de las dimensiones,
+separados por comas.
+Por ejemplo, un arreglo de enteros de 5 × 3 es declarado así::
+
+    integer, dimension(5, 3) :: a
+ 
+Este arreglo tiene quince elementos: desde ``a(1, 1)`` hasta ``a(5, 3)``.
+
+La manera típica de recorrer los elementos de un arreglo multidimensional
+es usar varios ciclos ``do`` anidados, uno por cada dimension.
+Por ejemplo,
+el siguiente programa suma todos los elementos del arreglo ``a``
+declarado en el ejemplo anterior::
+
+    suma = 0
+    do i = 1, 5
+        do j = 1, 3
+            suma = suma + a(i, j)
+        end do
+    end do
+
+Cada índice no tiene un significado por sí mismo.
+El programador puede interpretar cada uno como quiera,
+siempre que sea consistente a lo largo del programa.
+Por ejemplo, para los elementos ``a(i, j)`` de un arreglo bidimensional,
+uno puede interpretar ``i`` como las filas de una tabla
+y ``j`` como las columnas, pero hacerlo al revés también es correcto.
 
 Inicialización de arreglos
 --------------------------
@@ -151,12 +104,49 @@ por lo que no corresponde que los ingrese el usuario.
 
 Para estos casos,
 es posible inicializar el arreglo durante la declaración.
-Por ejemplo,
-la siguiente declaracion
-inicializa un arreglo con la cantidad de días
+El siguiente ejemplo ilustra la sintaxis
+inicializando un arreglo con la cantidad de días
 que tienen los meses del año:
 
 .. literalinclude:: programas/dias-mes.f95
+
+Índices arbitrarios
+-------------------
+.. index:: índice arbitrario
+
+Es posible declarar un arreglo de tamaño ``N``
+de modo que sus índices no vayan desde 1 hasta ``N``,
+sino que tomen otros valores.
+
+Por ejemplo,
+podemos usar un arreglo bidimensional
+para guardar los totales mensuales de lluvia caída
+de los últimos cinco años.
+No es muy conveniente que el índice que representa el año
+tome los valores de 1 a 5.
+Para hacer que los índices vayan desde 2006 hasta 2010,
+la declaración se hace así::
+
+    real, dimension(2006:2010, 12) :: lluvia
+
+Para asignar el total de lluvia caída de agosto de 2010, se hace así::
+
+    lluvia(2010, 8) = 13.4
+
+Secciones de arreglos
+---------------------
+Para referirse a una sección de un arreglo
+que corresponde a un arreglo de menor dimensión
+se puede usar dos puntos (``:``) en lugar del índice
+para indicar que se desea obtener todos los elementos
+a lo largo de la dimensión correspondiente.
+
+Por ejemplo,
+en el arreglo de los totales de lluvia por mes,
+``lluvia(2007, :)`` es el arreglo unidimensional
+con los doce totales mensuales del año 2007,
+mientras que ``lluvia(:, 9)`` es el arreglo unidimensional
+de tamaño cinco con los totales de lluvia de septiembre de cada año.
 
 Operaciones sobre arreglos
 --------------------------
