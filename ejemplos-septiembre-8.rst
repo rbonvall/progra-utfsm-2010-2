@@ -39,10 +39,8 @@ para decidir si lo es o no:
 (Por escribir)
 
 .. literalinclude:: programas/palindromo.f95
-   :linenos:
 
 .. literalinclude:: programas/palindromo-2.f95
-   :linenos:
 
 Cuadrado mágico
 ---------------
@@ -70,10 +68,8 @@ hay que hacerlo en dos pasos:
 (Por escribir)
 
 .. literalinclude:: programas/cuadrado-magico.f95
-   :linenos:
 
 .. literalinclude:: programas/cuadrado-magico-2.f95
-   :linenos:
 
 .. include:: disqus.rst
 
