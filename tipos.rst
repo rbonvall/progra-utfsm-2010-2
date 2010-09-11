@@ -55,8 +55,8 @@ indicando con una letra ``e`` la potencia de 10 usada::
     9.1094e-31
 
 Estos valores son respectivamente iguales a
-:math:`6,02\cdot 10^{23}` (el `número de Avogadro`_) y
-:math:`9,1094\cdot 10^{-31}` (la `masa del electrón`_ en kilógramos).
+`6,02\cdot 10^{23}` (el `número de Avogadro`_) y
+`9,1094\cdot 10^{-31}` (la `masa del electrón`_ en kilógramos).
 
 No todos los números reales son representables por el tipo ``real``.
 Internamente, el computador representa los números reales

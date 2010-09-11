@@ -76,38 +76,38 @@ Un ejemplo sencillo: resolver una ecuación cuadrática
 
 Una `ecuación cuadrática`_
 es una ecuación de la forma
-:math:`ax^2 + bx + c = 0`,
-donde :math:`a`, :math:`b` y :math:`c` son datos dados
-y :math:`x` es la incógnita que se desea determinar.
+`ax^2 + bx + c = 0`,
+donde `a`, `b` y `c` son datos dados
+y `x` es la incógnita que se desea determinar.
 
 .. _ecuación cuadrática: http://es.wikipedia.org/wiki/Ecuaci%C3%B3n_de_segundo_grado
 
-Por ejemplo, :math:`2x^2 - 5x + 2 = 0` es una ecuación cuadrática
-con :math:`a = 2`, :math:`b = -5` y :math:`c = 2`.
-Sus soluciones son :math:`x_1 = 1/2` y :math:`x_2 = 2`,
+Por ejemplo, `2x^2 - 5x + 2 = 0` es una ecuación cuadrática
+con `a = 2`, `b = -5` y `c = 2`.
+Sus soluciones son `x_1 = 1/2` y `x_2 = 2`,
 como se puede comprobar reemplazando estos valores en la ecuación.
 
 El problema computacional de resolver una ecuación cuadrática
 puede ser planteado así:
 
-  Dados :math:`a`, :math:`b` y :math:`c`,
-  entontrar los valores de :math:`x`
-  que satisfacen :math:`ax^2 + bx + c = 0`.
+  Dados `a`, `b` y `c`,
+  entontrar los valores de `x`
+  que satisfacen `ax^2 + bx + c = 0`.
 
 En álgebra aprendemos un algoritmo para resolver este problema.
 Es lo suficientemente detallado para que pueda usarlo cualquier persona,
 incluso sin saber qué es una ecuación cuadrática.
 
 1. Obtener los valores de
-   :math:`a`, :math:`b` y :math:`c`.
-2. Calcular el discriminante :math:`b^2 - 4ac`, y llamarlo :math:`Δ`.
-3. Si :math:`Δ < 0`, entonces la ecuación no tiene soluciones reales.
-4. Si :math:`Δ = 0`, entonces la ecuación tiene una solución real,
-   que es :math:`x = -b/2a`.
-5. Si :math:`Δ > 0`, entonces
+   `a`, `b` y `c`.
+2. Calcular el discriminante `b^2 - 4ac`, y llamarlo `Δ`.
+3. Si `Δ < 0`, entonces la ecuación no tiene soluciones reales.
+4. Si `Δ = 0`, entonces la ecuación tiene una solución real,
+   que es `x = -b/2a`.
+5. Si `Δ > 0`, entonces
    la ecuación tiene dos soluciones reales,
-   que son :math:`x = (-b ± \sqrt{Δ})/2a`.
-6. Entregar las soluciones :math:`x` obtenidas.
+   que son `x = (-b ± \sqrt{Δ})/2a`.
+6. Entregar las soluciones `x` obtenidas.
 
 La entrada es el paso 1, la salida es el paso 6,
 y el resto de los pasos son parte del proceso.
