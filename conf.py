@@ -23,6 +23,7 @@ jsmath_path = 'jsMath/easy/load.js'
 source_suffix = '.rst'
 master_doc = 'index'
 highlight_language = 'custom_fortran'
+default_role = 'math'
 
 project = u'Programación 2-2010'
 copyright = u'2010, Roberto Bonvallet'
@@ -36,8 +37,6 @@ unused_docs = ['disqus', 'calendario']
 # List of directories, relative to source directory, that shouldn't be searched
 # for source files.
 exclude_trees = ['_build']
-
-#default_role = None  # for `text`
 
 # If true, '()' will be appended to :func: etc. cross-reference text.
 #add_function_parentheses = True
