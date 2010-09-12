@@ -174,5 +174,17 @@ Por ejemplo, si ``a`` y ``b`` son arreglos,
 ``a * b`` es el arreglo de los productos de los elementos respectivos
 de ``a`` y ``b``.
 
+Entrada de elementos de un arreglo
+----------------------------------
+Para que el usuario pueda ingresar
+todos los elementos de un arreglo en una misma línea de entrada,
+se puede usar la sintaxis llamada **do implícito**::
+
+    read *, (arreglo(i), i = 1, N)
+
+Cuando en el programa aparece esta sentencia,
+significa que el usuario debe ingresar, en la misma línea,
+todos los ``N`` valores del arreglo separados por espacios.
+
 .. include:: disqus.rst
 
