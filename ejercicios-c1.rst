@@ -123,7 +123,7 @@ Escriba un programa que descubra este número.
 
 Pi
 --
-Desarrollar un programa que estime el valor de :math:`pi`
+Desarrollar un programa que estime el valor de :math:`\pi`
 usando la siguiente suma infinita:
 
 .. math::
