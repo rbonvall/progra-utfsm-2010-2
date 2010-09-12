@@ -9,7 +9,7 @@ La `desviación estándar`_ se calcula usando la siguiente fórmula:
 
       \sigma_x = \sqrt{\frac{1}{N-1} \sum_{i=1}^{N} (x_i - \bar x)^2},
 
-donde :math:`\bar x` es el promedio y :math:`x_i` es el :math:`i`-ésimo dato.
+donde `\bar x` es el promedio y `x_i` es el `i`-ésimo dato.
 
 La manera ordenada de diseñar el algoritmo
 es separar el proceso en varias etapas:

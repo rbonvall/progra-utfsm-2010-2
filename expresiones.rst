@@ -248,7 +248,7 @@ tiene un nombre.
 Los operandos de una función se llaman **parámetros** o **argumentos**.
 
 Por ejemplo, la función ``exp`` tiene un parámetro real ``x``,
-y entrega como resultado :math:`e^x`.
+y entrega como resultado `e^x`.
 
 .. index:: llamada a función
 
@@ -308,7 +308,7 @@ el criterio que usan para redondear:
 
 En matemáticas y ciencias de la computación,
 las últimas dos funciones se llaman respectivamente `techo y piso`_,
-y se representan como :math:`⌈x⌉` y :math:`⌊x⌋`.
+y se representan como `⌈x⌉` y `⌊x⌋`.
 
 .. _techo y piso: http://es.wikipedia.org/wiki/Funciones_de_parte_entera
 

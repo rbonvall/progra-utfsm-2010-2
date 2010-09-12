@@ -115,7 +115,7 @@ será automáticamente el menor y el mayor.
 En clases yo ocupé los valor ``1e300`` y ``-1e300``,
 ¡pero estos valores no son válidos!, ya que el rango de las variables
 de tipo real llega aproximadamente hasta ``3.4e38``
-(esto es :math:`3,4\times 10^{38}`).
+(esto es `3,4\times 10^{38}`).
 
 Afortunadamente existe una función llamada ``huge``
 que entrega el mayor valor posible que puede tomar una variable.

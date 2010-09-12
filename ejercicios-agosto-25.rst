@@ -176,6 +176,6 @@ Lecciones importantes
 * Antes de escribir código, hay que pensar en el algoritmo.
   La mejor manera es pensar «¿cómo lo haría yo a mano?».
 * Hay que usar notación de programación, no de matemáticas:
-  :math:`\frac{a}{b^2}` está mal; ``a / (b ** 2)`` está bien.
+  `\frac{a}{b^2}` está mal; ``a / (b ** 2)`` está bien.
 
 .. include:: disqus.rst

@@ -60,8 +60,8 @@ Si el set está empatado a 6 juegos,
 el set se define en un último juego,
 en cuyo caso el resultado final es 7-6.
 
-Sabiendo que el jugador A ha ganado :math:`m` juegos,
-y el jugador B, :math:`n` juegos,
+Sabiendo que el jugador A ha ganado `m` juegos,
+y el jugador B, `n` juegos,
 al periodista le gustaría saber:
 
 * si A ganó el set, o
@@ -118,12 +118,12 @@ Hardy-Ramanujan
 ---------------
 El *número de Hardy-Ramanujan* es el menor número entero
 que puede ser expresado como la suma de dos cubos perfectos
-de dos maneras distintas (:math:`a^3+b^3=c^3+d^3`).
+de dos maneras distintas (`a^3+b^3=c^3+d^3`).
 Escriba un programa que descubra este número.
 
 Pi
 --
-Desarrollar un programa que estime el valor de :math:`\pi`
+Desarrollar un programa que estime el valor de `pi`
 usando la siguiente suma infinita:
 
 .. math::
@@ -131,7 +131,7 @@ usando la siguiente suma infinita:
     \pi = 4\left(1 - \frac{1}{3} + \frac{1}{5} - \frac{1}{7} + \cdots\right)
 
 El programa debe detenerse cuando encuentre un término
-cuyo valor sea menor que :math:`10^{-5}`.
+cuyo valor sea menor que `10^{-5}`.
 
 La salida del programa debe ser simplemente algo como::
 

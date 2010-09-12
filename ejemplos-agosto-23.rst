@@ -68,7 +68,7 @@ es primo_ o no.
 
 El algoritmo consiste en partir suponiendo
 que el número es primo,
-e intentar encontrar un divisor entre :math:`2` y :math:`n - 1`.
+e intentar encontrar un divisor entre `2` y `n - 1`.
 Si se encuentra alguno, entonces el número no es primo.
 Si no se encuentra ninguno, entonces el supuesto sigue siendo cierto.
 
