@@ -138,8 +138,8 @@ Cuadrado mágico
 Un cuadrado mágico es un arreglo cuadrado de números enteros
 en que las sumas de cada fila, de cada columna y de cada diagonal
 son iguales.
-El problema es: desarrollar un programa que indique
-si un cuadrado de números es mágico o no.
+Escriba un programa que indique
+si un cuadrado de números de 4 × 4 es mágico o no.
 
 .. code-block:: none
 
@@ -150,15 +150,49 @@ si un cuadrado de números es mágico o no.
     13  3  2 16
      El cuadrado es magico.
 
+.. code-block:: none
+
+     Ingrese el cuadrado:
+     1  2  3  4
+     5  6  7  8
+     9 10 11 12
+    13 14 15 16
+     El cuadrado no es magico.
+
 Para resolver este problema,
 hay que hacerlo en dos pasos:
 
 1. calcular las sumas de las filas, columnas y diagonales;
-2. verificar que todas las sumas son iguales.
+2. verificar que todas las sumas calculadas sean iguales.
 
-(Por escribir)
+Para guardar las sumas,
+es necesario usar dos arreglos unidimensionales
+para guardar, respectivamente,
+las sumas de cada fila y las sumas de cada columna.
+Además, se ocupa una variable escalar para cada una
+de las dos diagonales.
+
+La manera más directa de calcular las sumas
+usando los conocimientos del primer certamen
+es inicializar todas las sumas con el valor cero,
+y luego recorrer el cuadrado
+actualizando en cada iteración
+las sumas correspondientes a cada elemento.
+
+Una vez que las sumas han sido calculadas,
+se elige alguna de ellas (¡cualquiera!)
+como valor de referencia,
+y se busca entre el resto
+alguna que sea diferente.
+Si no se encuentra ninguna,
+entonces el cuadrado es mágico.
+
+El código es el siguiente:
 
 .. literalinclude:: programas/cuadrado-magico.f95
+
+Existe otra manera más breve de escribir el código
+usando operaciones sobre arreglos:
 
 .. literalinclude:: programas/cuadrado-magico-2.f95
 
