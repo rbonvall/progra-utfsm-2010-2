@@ -196,5 +196,19 @@ usando operaciones sobre arreglos:
 
 .. literalinclude:: programas/cuadrado-magico-2.f95
 
+Las operaciones sobre arreglos usadas son las siguientes:
+
+* ``cuadrado(i, :)`` es el arreglo de los elementos de la fila ``i``,
+  por lo que ``sum(cuadrado(i, :))`` permite obtener la suma de ellos
+  en una única expresión;
+* el resultado de la expresión ``suma_diagonal_1 == sumas_filas``
+  es un arreglo de valores de tipo ``logical``
+  en el que cada elemento indica si el elemento respectivo de ``sumas_filas``
+  es igual a ``suma_diagonal_1``;
+* la función ``all`` (en inglés: «todos»)
+  recibe como parámetro un arreglo de ``logical``
+  y entrega como resultado el valor ``.TRUE.``
+  sólo si todos los elementos del arreglo son verdaderos.
+
 .. include:: disqus.rst
 
