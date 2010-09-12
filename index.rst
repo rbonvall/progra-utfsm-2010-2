@@ -6,6 +6,10 @@ Programación, 2do semestre de 2010
 :Página del ramo: http://programacion.inf.utfsm.cl
 :Página del paralelo: http://progra.8o.cl (redirige aquí)
 
+.. important::
+
+    Próximo control: **lunes 13 de septiembre**.
+
 Contenidos del ramo
 -------------------
 
