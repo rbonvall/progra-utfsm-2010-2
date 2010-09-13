@@ -6,9 +6,12 @@ Programación, 2do semestre de 2010
 :Página del ramo: http://programacion.inf.utfsm.cl
 :Página del paralelo: http://progra.8o.cl (redirige aquí)
 
-.. important::
+El reglamento oficial de la asignatura
+y la planificación semestral
+están en la sección General_
+de la página oficial de la coordinación.
 
-    Próximo control: **lunes 13 de septiembre**.
+.. _General: http://programacion.inf.utfsm.cl/wp/general/
 
 Contenidos del ramo
 -------------------
