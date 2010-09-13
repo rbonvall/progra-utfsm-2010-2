@@ -60,5 +60,15 @@ El código es el siguiente:
 
 .. literalinclude:: programas/busqueda-binaria.f95
 
+La búsqueda binaria es mucho más eficiente que la búsqueda lineal.
+Para buscar un elemento en un arreglo de tamaño `N`,
+la búsqueda lineal hace `N` pasos en el peor caso,
+mientras que la búsqueda binaria hace `\log_2 N` pasos.
+
+Por ejemplo, si el arreglo tiene `2^{30}` elementos (≈ mil millones),
+la búsqueda binaria demorará a lo más 30 pasos, ya que cada paso
+reduce a la mitad el número de elementos dentro de los que puede estar
+el que estamos buscando.
+
 .. include:: disqus.rst
 
