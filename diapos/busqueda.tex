@@ -1,0 +1,221 @@
+\documentclass[10pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{palatino}
+\usepackage{fancyvrb}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Búsqueda en arreglos}
+\author{
+  Roberto Bonvallet \\
+  \url{roberto.bonvallet@usm.cl} \\
+  \url{http://progra.8o.cl}
+}
+
+\lstloadlanguages{fortran}
+\lstset{language=fortran,basicstyle=\small,%
+        morestring=[b]',stringstyle=\it,showstringspaces=false}
+\fvset{formatcom=\small,frame=single,gobble=6,commandchars=\\\{\}}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}{Ejercicios de hoy}
+    \begin{itemize}
+      \item Búsqueda lineal
+      \item Búsqueda binaria
+      \item Control 3
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}[fragile]
+    Determinar si un valor está o no en un arreglo.
+
+    \begin{lstlisting}[gobble=6]
+      integer, dimension(N) :: a = &
+          (/65, 27,  7, 21, 59, -9, 25, 24, 59, 57, &
+            43, 53,  0, 50,  3, 30, 29, 15, 20, 31, &
+            24, 47, -1,  1, 44, -6, 24, 14, 26, 41, &
+            73, 35, 65, 45, 36, 66, 19, 17, 15, 38/)
+    \end{lstlisting}
+
+    \begin{Verbatim}
+       ¿Qué valor quiere buscar?
+      \alert{48}
+       48 no está en el arreglo.
+    \end{Verbatim}
+
+    \begin{Verbatim}
+       ¿Qué valor quiere buscar?
+      \alert{29}
+       29 sí está en el arreglo.
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}[fragile]
+    Determinar en qué posición del arreglo está un valor.
+
+    \begin{lstlisting}[gobble=6]
+      integer, dimension(N) :: a = &
+          (/65, 27,  7, 21, 59, -9, 25, 24, 59, 57, &
+            43, 53,  0, 50,  3, 30, 29, 15, 20, 31, &
+            24, 47, -1,  1, 44, -6, 24, 14, 26, 41, &
+            73, 35, 65, 45, 36, 66, 19, 17, 15, 38/)
+    \end{lstlisting}
+
+    \begin{Verbatim}
+       ¿Qué valor quiere buscar?
+      \alert{48}
+       48 no está en el arreglo.
+    \end{Verbatim}
+
+    \begin{Verbatim}
+       ¿Qué valor quiere buscar?
+      \alert{29}
+       29 está en la posición 17
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}[fragile]
+    Determinar en qué posición del arreglo
+    hay un múltiplo de 19.
+
+    \begin{lstlisting}[gobble=6]
+      integer, dimension(N) :: a = &
+          (/65, 27,  7, 21, 59, -9, 25, 24, 59, 57, &
+            43, 53,  0, 50,  3, 30, 29, 15, 20, 31, &
+            24, 47, -1,  1, 44, -6, 24, 14, 26, 41, &
+            73, 35, 65, 45, 36, 66, 19, 17, 15, 38/)
+    \end{lstlisting}
+
+    \begin{Verbatim}
+       El múltiplo de 19 está en la posición 9.
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}[fragile]
+    Determinar en qué posición de un arreglo \alert{ordenado}
+    está un valor.
+    
+    \begin{lstlisting}[gobble=6]
+      integer, dimension(40) :: a = &
+          (/-9, -6, -1,  0,  1,  3,  7, 14, 15, 15, &
+            17, 19, 20, 21, 24, 24, 24, 25, 26, 27, &
+            29, 30, 31, 35, 36, 38, 41, 43, 44, 45, &
+            47, 50, 53, 57, 59, 59, 65, 65, 66, 73/)
+    \end{lstlisting}
+
+    \begin{Verbatim}
+       ¿Qué valor quiere buscar?
+      \alert{48}
+       48 no está en el arreglo.
+    \end{Verbatim}
+
+    \begin{Verbatim}
+       ¿Qué valor quiere buscar?
+      \alert{30}
+       30 está en la posición 22.
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}
+    \begin{columns}
+      \column{.35\textwidth}
+      \tiny
+      \begin{tabular}{r|r|l}\cline{2-2}
+         1 & \only<-2>{--9} & \\
+         2 & \only<-2>{--6} & \\
+         3 & \only<-2>{--1} & \\
+         4 & \only<-2>{  0} & \\
+         5 & \only<-2>{  1} & \\
+         6 & \only<-2>{  3} & \\
+         7 & \only<-2>{  7} & \\
+         8 & \only<-2>{ 14} & \\
+         9 & \only<-2>{ 15} & \\
+        10 & \only<-2>{ 15} & \\
+        11 & \only<-2>{ 17} & \\
+        12 & \only<-2>{ 19} & \\
+        13 & \only<-2>{ 20} & \\
+        14 & \only<-2>{ 21} & \\
+        15 & \only<-2>{ 24} & \\
+        16 & \only<-2>{ 24} & \\
+        17 & \only<-2>{ 24} & \\
+        18 & \only<-2>{ 25} & \\
+        19 & \only<-2>{ 26} & \\
+        20 & \only<-2>{ 27} & \only<2>{$\longleftarrow$ ¿\texttt{a(20) == 30}?} \\
+        21 &          { 29} & \\
+        22 &  \alert<9>{30} & \only<8-9>{$\longleftarrow$ ¿\texttt{a(22) == 30}?} \\
+        23 &          { 31} & \\
+        24 &          { 35} & \\
+        25 & \only<-6>{ 36} & \only<6>{$\longleftarrow$ ¿\texttt{a(25) == 30}?} \\
+        26 & \only<-6>{ 38} & \\
+        27 & \only<-6>{ 41} & \\
+        28 & \only<-6>{ 43} & \\
+        29 & \only<-6>{ 44} & \\
+        30 & \only<-4>{ 45} & \only<4>{$\longleftarrow$ ¿\texttt{a(30) == 30}?} \\
+        31 & \only<-4>{ 47} & \\
+        32 & \only<-4>{ 50} & \\
+        33 & \only<-4>{ 53} & \\
+        34 & \only<-4>{ 57} & \\
+        35 & \only<-4>{ 59} & \\
+        36 & \only<-4>{ 59} & \\
+        37 & \only<-4>{ 65} & \\
+        38 & \only<-4>{ 65} & \\
+        39 & \only<-4>{ 66} & \\
+        40 & \only<-4>{ 73} & \\
+        \cline{2-2}
+      \end{tabular}
+      \column{.65\textwidth}
+        Buscar el valor $x = 30$ en el arreglo $a$:
+        \begin{itemize}
+          \item<1-> Buscar $x$ desde $a(1)$ hasta $a(40)$
+          \item<2-> Comparar con $a(20)$\dots\quad \only<3->{$x > a(20)$}
+          \item<3-> Buscar $x$ desde $a(21)$ hasta $a(40)$
+          \item<4-> Comparar con $a(30)$\dots\quad \only<5->{$x < a(30)$}
+          \item<5-> Buscar $x$ desde $a(21)$ hasta $a(29)$
+          \item<6-> Comparar con $a(25)$\dots\quad \only<7->{$x < a(25)$}
+          \item<7-> Buscar $x$ desde $a(21)$ hasta $a(24)$
+          \item<8-> Comparar con $a(22)$\dots\quad \only<9->{$x == a(22)$}
+          \item<9-> $x$ está en la posición 22
+        \end{itemize}
+    \end{columns}
+  \end{frame}
+
+  \begin{frame}
+    ¿Cuánto se demora la búsqueda en el peor caso?
+
+    \begin{tabular}{l|l|l}
+      Tamaño del arreglo & Lineal\hfil & Binaria \\ \hline
+      16            & \uncover<2->{16}            & \uncover<3->{4}  \\
+      1000          & \uncover<2->{1000}          & \uncover<3->{10} \\
+      1 millón      & \uncover<2->{1 millón}      & \uncover<3->{20} \\
+      1000 millones & \uncover<2->{1000 millones} & \uncover<3->{30} \\
+      $N$           & \uncover<4>{$N$} & \uncover<4>{$\log_2 N$} \\
+    \end{tabular}
+  \end{frame}
+
+  \begin{frame}{Control 3}
+    \only<2>{
+      Escriba un programa que:
+      \begin{itemize}
+        \item pida al usuario ingresar 1000 números enteros, y
+        \item muestre por pantalla
+          todos los números ingresados
+          que sean pares y menores que el último.
+      \end{itemize}
+    }
+    
+  \end{frame}
+
+\end{document}
+
