@@ -1,0 +1,126 @@
+\documentclass[10pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{palatino}
+\usepackage{fancyvrb}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Ejercicios con arreglos}
+\author{
+  Roberto Bonvallet \\
+  \url{roberto.bonvallet@usm.cl} \\
+  \url{http://progra.8o.cl}
+}
+
+\lstloadlanguages{fortran}
+\lstset{language=fortran,basicstyle=\small,%
+        morestring=[b]',stringstyle=\it,showstringspaces=false}
+\fvset{formatcom=\small,frame=single,gobble=6,commandchars=\\\{\}}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}[fragile]
+    Ordenar los valores ingresados:
+
+    \begin{Verbatim}
+       Ingrese 10 datos:
+      \alert{3}
+      \alert{1}
+      \alert{5}
+      \alert{8}
+      \alert{4}
+      \alert{7}
+      \alert{2}
+      \alert{6}
+      \alert{9}
+      \alert{0}
+       Los datos ordenados son:
+      0
+      1
+      2
+      3
+      4
+      5
+      6
+      7
+      8
+      9
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}[fragile]
+    Tarea para fiestas patrias:
+    ordenar palabras por largo.
+
+    \begin{Verbatim}
+       Ingrese 4 palabras:
+      \alert{nuez}
+      \alert{paralelepípedo}
+      \alert{perro}
+      \alert{bicicleta}
+       Ordenadas por largo:
+      paralelepípedo
+      bicicleta
+      perro
+      nuez
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}[fragile]
+    \begin{Verbatim}
+       Ingrese los nombres de los equipos:
+      \alert{España}
+      \alert{Suiza}
+      \alert{Honduras}
+      \alert{Chile}
+      
+       España-Suiza
+      \alert{0 1}
+       España-Honduras
+      \alert{3 0}
+       España-Chile
+      \alert{2 1}
+       Suiza-Honduras
+      \alert{0 0}
+       Suiza-Chile
+      \alert{0 1}
+       Honduras-Chile
+      \alert{0 1}
+      
+       Equipo             Pts         Dif
+       España               6           3
+       Suiza                4           0
+       Honduras             1          -4
+       Chile                6           1
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}[fragile]
+    Búsqueda en arreglos de múltiples dimensiones.
+    \begin{Verbatim}
+       Ingrese los datos del arreglo
+      \alert{1.5  7.1  8.4  9.0}
+      \alert{2.1  4.4  4.1  3.2}
+      \alert{0.4  0.5  1.9  5.5}
+      \alert{3.4  2.7  1.1  0.0}
+
+       ¿Qué elemento quiere buscar?
+      \alert{4.1}
+       
+       Está en la posición i=2, j=3
+    \end{Verbatim}
+
+\end{frame}
+\end{document}
+
+
