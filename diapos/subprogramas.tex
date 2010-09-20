@@ -1,0 +1,115 @@
+\documentclass[10pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{palatino}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Subprogramas}
+\author{
+  Roberto Bonvallet \\
+  \url{roberto.bonvallet@usm.cl} \\
+  \url{http://progra.8o.cl}
+}
+
+\lstloadlanguages{fortran}
+\lstset{language=fortran,basicstyle=\small,%
+        morestring=[b]',stringstyle=\it,showstringspaces=false}
+\fvset{formatcom=\small,frame=single,gobble=6,commandchars=\\\{\}}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \begin{columns}
+      \column{.45\textwidth}
+        Factorial:
+        \[ n! = 1\cdot2\cdot\;\cdots\;\cdot(n - 1)\cdot n \]
+      \column{.45\textwidth}
+        Número combinatorio:
+        \[ \binom{m}{n} = \frac{m!}{(m - n)!\;n!} \]
+    \end{columns}
+
+    \begin{columns}
+      \pause
+      \column{.45\textwidth}
+        \begin{lstlisting}[gobble=10,frame=single]
+          f = 1
+          do i = 1, n
+              f = f * i
+          end do
+        \end{lstlisting}
+
+      \pause
+      \column{.45\textwidth}
+        \begin{lstlisting}[gobble=10,frame=single]
+          comb = 1
+          f = 1
+          do i = 1, m
+              f = f * i
+          end do
+          comb = comb * f
+          f = 1
+          do i = 1, m - n
+              f = f * i
+          end do
+          comb = comb / f
+          f = 1
+          do i = 1, n
+              f = f * i
+          end do
+          comb = comb / f
+        \end{lstlisting}
+    \end{columns}
+    
+\end{frame}
+
+  \begin{frame}[fragile]
+    \[ \frac{\sqrt{m}}{\sqrt{m - n} \sqrt{n}} \]
+    \begin{lstlisting}[gobble=6,frame=single]
+      c = sqrt(m) / (sqrt(m - n) * sqrt(n))
+    \end{lstlisting}
+
+    \[ \frac{\cos{m}}{\cos{(m - n)} \cos{n}} \]
+    \begin{lstlisting}[gobble=6,frame=single]
+      c = cos(m) / (cos(m - n) * cos(n))
+    \end{lstlisting}
+
+    \[ \frac{m!}{(m - n)!\;n!} \] \pause
+    \begin{lstlisting}[gobble=6,frame=single]
+      c = factorial(m) / (factorial(m - n) * factorial(n))
+    \end{lstlisting}
+\end{frame}
+
+  \begin{frame}[fragile]
+    \begin{lstlisting}[gobble=6,frame=single]
+      function factorial(p) result(f)
+          integer :: p, f, i
+          f = 1
+          do i = 1, p
+              f = f * i
+          end do
+      end function factorial
+    \end{lstlisting}
+    \pause
+    \begin{lstlisting}[gobble=6,frame=single]
+      function comb(m, n) result(c)
+          integer :: m, n, c
+          c = factorial(m) / (factorial(m - n) * factorial(n))
+      end function comb
+    \end{lstlisting}
+    
+\end{frame}
+
+  \begin{frame}
+    \lstinputlisting{../programas/comb-con-funcion.f95}
+  \end{frame}
+
+\end{document}
