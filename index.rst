@@ -6,12 +6,19 @@ Programación, 2do semestre de 2010
 :Página del ramo: http://programacion.inf.utfsm.cl
 :Página del paralelo: http://progra.8o.cl (redirige aquí)
 
-El reglamento oficial de la asignatura
-y la planificación semestral
-están en la sección General_
-de la página oficial de la coordinación.
+.. important::
 
-.. _General: http://programacion.inf.utfsm.cl/wp/general/
+    El reglamento oficial de la asignatura
+    y la planificación semestral
+    (fechas de ayudantías, controles y laboratorios)
+    están en la sección `Reglas y calendarización`_
+    de la página oficial de la coordinación.
+
+.. important::
+
+    El **control 4** es el lunes 4 de octubre.
+
+.. _Reglas y calendarización: http://programacion.inf.utfsm.cl/wp/general/
 
 Contenidos del ramo
 -------------------
