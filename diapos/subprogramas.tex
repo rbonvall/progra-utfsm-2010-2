@@ -112,4 +112,38 @@
     \lstinputlisting{../programas/comb-con-funcion.f95}
   \end{frame}
 
+  \begin{frame}[fragile]
+    \begin{lstlisting}[gobble=6,frame=single]
+      n = factorial(7)
+      m = factorial(n)
+      p = factorial(1, 2)
+      q = factorial('siete')
+      s = trim(factorial(10))
+      n = factorial(2 * m) + 3
+      print *, factorial(n)
+      read *, factorial(n)
+      factorial(2)
+    \end{lstlisting}
+\end{frame}
+
+  \begin{frame}[fragile]
+    Escriba un programa que diga si el número ingresado
+    es primo o no.
+    \begin{Verbatim}
+       Ingrese un número entero:
+      \alert{19}
+       19 es primo
+    \end{Verbatim}
+
+    Escriba un programa que muestre los 100 primeros números primos.
+    \begin{Verbatim}
+       2 3 5 7 11 ... 541
+    \end{Verbatim}
+
+    Escriba un programa que muestre los números primos menores que 1000.
+    \begin{Verbatim}
+       2 3 5 7 11 ... 997
+    \end{Verbatim}
+\end{frame}
+
 \end{document}
