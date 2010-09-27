@@ -6,7 +6,7 @@ program funcion_factorial
     print *, factorial(m - 1)
     print *, factorial(3)
 
-    ! aquí podemos estar seguros de que
+    ! aqui podemos estar seguros de que
     ! el valor de m no ha cambiado
 
 contains
