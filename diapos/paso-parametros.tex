@@ -1,0 +1,156 @@
+\documentclass[10pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{palatino}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Paso de parámetros}
+\author{
+  Roberto Bonvallet \\
+  \url{roberto.bonvallet@usm.cl} \\
+  \url{http://progra.8o.cl}
+}
+
+\lstloadlanguages{fortran}
+\lstset{language=fortran,basicstyle=\small,%
+        morestring=[b]',stringstyle=\it,showstringspaces=false}
+\fvset{formatcom=\small,frame=single,gobble=6,commandchars=\\\{\}}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{Subprogramas}
+    \begin{lstlisting}[frame=single,gobble=6,basicstyle=\large]
+      program nombre
+
+          ! declaraciones
+
+          ! programa
+
+      contains
+
+          ! subprogramas
+
+      end program nombre
+    \end{lstlisting}
+    
+\end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{Subprogramas}
+    \begin{columns}
+      \column{.5\textwidth}
+        \begin{lstlisting}[frame=single,gobble=10]
+          function fact(n) result(f)
+              integer :: n, f, i
+
+              f = 1
+              do i = 1, n
+                  f = f * i
+              end do
+          end function factorial
+        \end{lstlisting}
+      \column{.5\textwidth}
+        \begin{lstlisting}[frame=single,gobble=10]
+          subroutine llenar(n)
+              integer :: n, i
+
+              do i = 1, n
+                  read *, a(i)
+              end do
+
+          end subroutine llenar
+        \end{lstlisting}
+    \end{columns}
+
+\end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{¿Qué pasa al modificar el parámetro?}
+    \begin{columns}
+      \column{0.5\textwidth}
+        \lstinputlisting[frame=single]{../programas/pp-no-1.f95}
+      \column{0.5\textwidth}
+        \lstinputlisting[frame=single]{../programas/pp-no-2.f95}
+    \end{columns}
+    \pause
+    \begin{columns}
+      \column{0.5\textwidth}
+        \begin{Verbatim}
+          3
+        \end{Verbatim}
+      \column{0.5\textwidth}
+        \begin{Verbatim}
+          2
+        \end{Verbatim}
+    \end{columns}
+
+\end{frame}
+
+  \begin{frame}
+    A veces queremos que los parámetros cambien\dots:
+    \lstinputlisting[frame=single]{../programas/intercambio.f95}
+  \end{frame}
+
+  \begin{frame}
+    \dots y otras veces queremos que los parámetros no cambien:
+    \lstinputlisting[frame=single]{../programas/factorial-fn-in.f95}
+  \end{frame}
+
+  \begin{frame}
+    \begin{itemize}
+      \item \lstinline+intent(in)+:
+      \begin{itemize}
+        \item el compilador no permite que el parámetro sea modificado;
+        \item se puede pasar el valor de cualquier expresión
+          como parámetro del subprograma.
+      \end{itemize}
+      \item \lstinline+intent(in out)+:
+      \begin{itemize}
+        \item sí se puede modificar el valor del parámetro;
+        \item sólo se puede pasar una variable como parámetro.
+      \end{itemize}
+      \item sin \lstinline+intent+:
+      \begin{itemize}
+        \item todo está permitido;
+        \item para evitar confusión, mejor siempre declarar \lstinline+intent+.
+      \end{itemize}
+    \end{itemize}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Ejercicio: ruteo}
+    \lstinputlisting{../programas/comb-con-intent.f95}
+  \end{frame}
+
+  \begin{frame}
+    \frametitle{Paso de arreglos como parámetros}
+    \lstinputlisting{../programas/paso-arreglos.f95}
+  \end{frame}
+
+  \begin{frame}[fragile]{Ejercicio}
+    Escriba un programa que pida cinco números
+    e indique cuál es la mediana.
+
+    \begin{Verbatim}
+       Ingrese 5 números
+      \alert{3.1}
+      \alert{2.0}
+      \alert{5.4}
+      \alert{1.7}
+      \alert{4.3}
+       La mediana es 3.100000
+    \end{Verbatim}
+
+\end{frame}
+
+\end{document}
