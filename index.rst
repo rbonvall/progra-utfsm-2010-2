@@ -52,6 +52,7 @@ Contenidos del ramo
    paso-parametros
    ejemplos-septiembre-28
    ambitos
+   ejemplos-septiembre-29
 
 Calendario del curso
 --------------------
