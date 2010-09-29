@@ -1,0 +1,83 @@
+\documentclass[10pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{palatino}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Ámbitos}
+\author{
+  Roberto Bonvallet \\
+  \url{roberto.bonvallet@usm.cl} \\
+  \url{http://progra.8o.cl}
+}
+
+\lstloadlanguages{fortran}
+\lstset{language=fortran,basicstyle=\small,%
+        morestring=[b]',stringstyle=\it,showstringspaces=false}
+\fvset{formatcom=\small,frame=single,gobble=6,commandchars=\\\{\}}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}
+    \lstinputlisting{../programas/ruteo-subprogramas.f95}
+  \end{frame}
+
+  \begin{frame}[fragile]
+    Escriba un programa
+    que cuente cuántas veces aparece cada letra
+    en una oración ingresada por el usuario.
+    \begin{Verbatim}
+       Ingrese una oracion
+      \alert{Puro Chile es tu cielo azulado}
+       a           2
+       c           2
+       d           1
+       e           3
+       h           1
+       i           2
+       l           3
+       o           3
+       p           1
+       r           1
+       s           1
+       t           1
+       u           3
+       z           1
+    \end{Verbatim}
+
+\end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{ASCII code}
+    \begin{verbatim}
+           3-  4-  5-  6-  7-  8-  9- 10- 11- 12-
+         ----------------------------------------
+      -0 |     (   2   <   F   P   Z   d   n   x
+      -1 |     )   3   =   G   Q   [   e   o   y
+      -2 |     *   4   >   H   R   \   f   p   z
+      -3 | !   +   5   ?   I   S   ]   g   q   {
+      -4 | "   ,   6   @   J   T   ^   h   r   |
+      -5 | #   -   7   A   K   U   _   i   s   }
+      -6 | $   .   8   B   L   V   `   j   t   ~
+      -7 | %   /   9   C   M   W   a   k   u  DEL
+      -8 | &   0   :   D   N   X   b   l   v 
+      -9 |     1   ;   E   O   Y   c   m   w 
+    \end{verbatim}
+
+    \begin{itemize}
+      \item \lstinline+iachar('m')+ $\longrightarrow 109$
+      \item \lstinline+achar(78)+ $\longrightarrow$ \lstinline+N+
+    \end{itemize}
+
+\end{frame}
+
+\end{document}
