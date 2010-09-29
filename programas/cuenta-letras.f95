@@ -16,7 +16,7 @@ program cuenta_letras
 contains
 
     function contar_letras(s) result(frecs)
-        character(len=*) :: s
+        character(len=*), intent(in) :: s
         character :: letra
         integer, dimension(26) :: frecs
         integer :: i, ord
@@ -33,7 +33,7 @@ contains
     end function
     
     function orden(c) result(n)
-        character :: c
+        character, intent(in) :: c
         integer :: n
 
         n = 0
@@ -45,11 +45,10 @@ contains
     end function
 
     function letra(i) result(c)
+        integer, intent(in) :: i
         character :: c
-        integer :: i
 
         c = achar(iachar('a') + i - 1)
     end function letra
-        
 
 end program cuenta_letras
