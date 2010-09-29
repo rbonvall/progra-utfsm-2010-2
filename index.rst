@@ -49,6 +49,9 @@ Contenidos del ramo
    ejemplos-septiembre-15
    subprogramas
    ejemplos-septiembre-22
+   paso-parametros
+   ejemplos-septiembre-28
+   ambitos
 
 Calendario del curso
 --------------------
