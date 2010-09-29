@@ -1,4 +1,4 @@
-Ejemplos de la clase del 28 de septiembre
+Ejemplos de la clase del 27 de septiembre
 =========================================
 
 En los ruteos de programas con subprogramas,

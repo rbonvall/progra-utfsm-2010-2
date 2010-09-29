@@ -50,7 +50,7 @@ Contenidos del ramo
    subprogramas
    ejemplos-septiembre-22
    paso-parametros
-   ejemplos-septiembre-28
+   ejemplos-septiembre-27
    ambitos
    ejemplos-septiembre-29
 
