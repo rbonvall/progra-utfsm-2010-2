@@ -47,6 +47,39 @@ en una oración intresada por el usuario:
     u           3
     z           1
 
+Primero que todo,
+hay que tener un contador para cada letra.
+Lo que haremos será crear un arreglo de tamaño 26
+(un elemento para cada letra, excluyendo la ``ñ``
+para evitar problemas con Fortran)
+que llamaremos ``frecuencias``.
+
+A continuación
+podemos escribir la sección principal del programa
+y luego encargarnos de los subprogramas::
+
+    program cuenta_letras
+        implicit none
+        character(len=50) :: oracion
+        integer, dimension(26) :: frecuencias
+        integer :: i
+
+        print *, 'Ingrese una oracion'
+        read '(A)', oracion
+        frecuencias = contar_letras(oracion)
+        do i = 1, 26
+            if (frecuencias(i) > 0) then
+                print *, letra(i), frecuencias(i)
+            end if
+        end do
+
+    contains
+
+        ! ...
+
+    end program cuenta_letras
+
+Este problema lo terminaremos en la próxima clase.
 
 .. include:: disqus.rst
 
