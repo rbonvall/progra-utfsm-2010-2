@@ -1,11 +1,4 @@
 *.swp
 _build/
-diagramas/*.aux
-diagramas/*.log
-diagramas/*.pdf
 _static/jsMath
 _static/diagramas
-programas/*
-!programas/*.f95
-!programas/Makefile
-modules/*.pyc
