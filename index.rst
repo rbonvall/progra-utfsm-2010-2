@@ -49,6 +49,8 @@ Contenidos del ramo
    ejemplos-septiembre-27
    ambitos
    ejemplos-septiembre-29
+   ejercicios-octubre-4
+   ejercicios-octubre-6
 
 Calendario del curso
 --------------------
