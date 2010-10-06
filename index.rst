@@ -14,10 +14,6 @@ Programación, 2do semestre de 2010
     están en la sección `Reglas y calendarización`_
     de la página oficial de la coordinación.
 
-.. important::
-
-    El **control 4** es el lunes 4 de octubre.
-
 .. _Reglas y calendarización: http://programacion.inf.utfsm.cl/wp/general/
 
 Contenidos del ramo
