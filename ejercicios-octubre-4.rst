@@ -53,7 +53,9 @@ Es buena práctica definir dos constantes
 y para usar como límites de los ciclos.
 De este modo, el programa es más fácil de adaptar
 a otros tamaños de datos.
+
 ::
+
     integer, parameter :: NR_ALUMNOS = 4
     integer, parameter :: NR_CLASES = 7
     logical, dimension(NR_ALUMNOS, NR_CLASES) :: lista
