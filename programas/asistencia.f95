@@ -1,17 +1,15 @@
-program asistencia
+program control_asistencia
     implicit none
     integer, parameter :: NR_ALUMNOS = 4
     integer, parameter :: NR_CLASES = 7
-    logical, dimension(NR_ALUMNOS, NR_CLASES) :: lista
+    logical, dimension(NR_ALUMNOS, NR_CLASES) :: asistencia
     character(len=10), dimension(NR_ALUMNOS) :: nombres
     integer, dimension(NR_ALUMNOS) :: totales_alumnos
-    integer, dimension(NR_CLASES) :: totales_clases
     integer :: i
     
     call leer_nombres(nombres)
-    call leer_asistencia(nombres, lista)
-    totales_alumnos = calcular_totales_alumnos(lista)
-    totales_clases  = calcular_totales_clases(lista)
+    call leer_asistencia(nombres, asistencia)
+    totales_alumnos = calcular_totales_alumnos(asistencia)
     i = indice_mayor(totales_alumnos)
     print *, 'El alumno mas responsable fue ', nombres(i)
     print *, trim(nombres(i)), ' asistio a ', &
@@ -41,20 +39,34 @@ contains
         print *, lista
     end subroutine leer_asistencia
 
-    function calcular_totales_alumnos(lista) result(ta)
+    function calcular_totales_alumnos(lista) result(totales)
         logical, dimension(NR_ALUMNOS, NR_CLASES), intent(in) :: lista
-        integer, dimension(NR_ALUMNOS) :: ta
+        integer, dimension(NR_ALUMNOS) :: totales
+        integer :: alumno, clase
+
+        totales = 0
+        do alumno = 1, NR_ALUMNOS
+            do clase = 1, NR_CLASES
+                if (lista(alumno, clase)) then
+                    totales(alumno) = totales(alumno) + 1
+                end if
+            end do
+        end do
     end function calcular_totales_alumnos
 
-    function calcular_totales_clases(lista) result(tc)
-        logical, dimension(NR_ALUMNOS, NR_CLASES), intent(in) :: lista
-        integer, dimension(NR_CLASES) :: tc
-    end function calcular_totales_clases
-
-    function indice_mayor(datos) result(i)
+    function indice_mayor(datos) result(i_mayor)
         integer, dimension(:) :: datos
-        integer :: i
-        i = 1
+        integer :: i, i_mayor
+        integer :: mayor
+
+        i_mayor = 1
+        mayor = datos(1)
+        do i = 2, size(datos)
+            if (datos(i) > mayor) then
+                mayor = datos(i)
+                i_mayor = i
+            end if
+        end do
     end function
 
-end program asistencia
+end program control_asistencia
