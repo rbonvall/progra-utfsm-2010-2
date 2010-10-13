@@ -51,6 +51,50 @@ y un valor `x`, y entregue como resultado `p(x)`:
     -2.5
      p(x) =   178.68750
 
-(por escribir)
+Un detalle importante que hay que considerar
+es que el número de coeficientes es uno más
+que el grado del polinomio,
+pues los coeficientes se cuentan desde cero.
+Para simplificar el programa,
+se puede usar un arreglo cuyos índices vayan
+desde cero hasta el grado del arreglo.
+
+Como el grado del polinomio no es conocido
+antes de ejecutar el programa,
+hay que tener la precaución de crear un arreglo
+lo suficientemente grande
+para contener los polinomios
+que se desee representar.
+El grado máximo lo asignaremos
+a una constante ``GRADO_MAX``.
+
+El programa es el siguiente:
+
+.. literalinclude:: programas/eval-polinomio.f95
+
+La función ``evaluar`` necesita tres parámetros:
+los coeficientes, el grado y el valor de ``x``.
+El algoritmo subyacente es el obvio:
+se calcula las potencias de ``x``
+y se las multiplica por el coeficiente correspondiente
+a medida que se hace la suma.
+
+Como curiosidad,
+existe un algoritmo más eficiente para evaluar polinomios
+llamado `algoritmo de Horner`_,
+que evita calcular las potencias de ``x``.
+
+.. _algoritmo de Horner: http://es.wikipedia.org/wiki/Algoritmo_de_Horner
+
+El código de la función ``evaluar``
+usando el algoritmo de Horner quedaría así::
+
+    y = p(n)
+    do i = n - 1, 0, -1
+        y = y * x + p(i)
+    end do
+
+¿Por qué funciona este algoritmo?
 
 .. include:: disqus.rst
+
