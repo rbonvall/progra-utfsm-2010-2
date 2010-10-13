@@ -36,7 +36,6 @@ contains
             print *, 'Ingrese asistencia de ', nombres(alumno)
             read *, (lista(alumno, clase), clase = 1, NR_CLASES)
         end do
-        print *, lista
     end subroutine leer_asistencia
 
     function calcular_totales_alumnos(lista) result(totales)
