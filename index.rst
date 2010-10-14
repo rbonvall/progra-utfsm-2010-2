@@ -56,6 +56,7 @@ Contenidos del ramo
    ejemplos-septiembre-29
    ejercicios-octubre-4
    ejercicios-octubre-6
+   ejercicios-c2
 
 Calendario del curso
 --------------------
