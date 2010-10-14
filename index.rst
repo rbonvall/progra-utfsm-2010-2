@@ -16,6 +16,11 @@ Programación, 2do semestre de 2010
 
 .. _Reglas y calendarización: http://programacion.inf.utfsm.cl/wp/general/
 
+.. note::
+
+    El segundo laboratorio evaluado
+    fue `aplazado una semana <http://programacion.inf.utfsm.cl/wp/2010/10/13/cambio-calendarizacion-laboratorio-evaluado/>`_.
+
 Contenidos del ramo
 -------------------
 
