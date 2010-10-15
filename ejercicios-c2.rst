@@ -3,6 +3,13 @@ Ejercicios para el certamen 2
 Algunos problemas para soltar la mano.
 Recuerden probar los programas usando Force 2.
 
+También pueden ejercitar con las guías de ejercicios
+de la sección de recursos_ de la página del ramo.
+La mayoría de los problemas de Pascal y C
+también sirven para Fortran.
+
+.. _recursos: http://programacion.inf.utfsm.cl/wp/recursos/
+
 Inventario
 ----------
 Un supermercado tiene el registro de sus productos en bodega
