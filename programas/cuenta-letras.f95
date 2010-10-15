@@ -17,15 +17,15 @@ contains
 
     function contar_letras(s) result(frecs)
         character(len=*), intent(in) :: s
-        character :: letra
+        character :: c
         integer, dimension(26) :: frecs
         integer :: i, ord
 
         frecs = 0
         do i = 1, len(s)
-            letra = s(i:i)
-            ord = orden(letra)
-            if (ord /= 0) then
+            c = s(i:i)
+            if (es_letra(c)) then
+                ord = orden(c)
                 frecs(ord) = frecs(ord) + 1
             end if
         end do
@@ -50,5 +50,13 @@ contains
 
         c = achar(iachar('a') + i - 1)
     end function letra
+
+    function es_letra(c) result(es)
+        character, intent(in) :: c
+        logical :: es
+
+        es = (iachar('a') <= iachar(c) .and. iachar(c) <= iachar('z')) .or. &
+             (iachar('A') <= iachar(c) .and. iachar(c) <= iachar('Z'))
+    end function es_letra
 
 end program cuenta_letras
