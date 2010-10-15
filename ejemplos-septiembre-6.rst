@@ -63,5 +63,11 @@ y que entregue como salida cuál es `el número que aparece más veces`_::
 .. _el número que aparece más veces: http://es.wikipedia.org/wiki/Moda_%28estad%C3%ADstica%29
 .. _desviación estándar: http://es.wikipedia.org/wiki/Desviaci%C3%B3n_est%C3%A1ndar
 
+Actualización: solución al problema de la moda
+----------------------------------------------
+Ésta es una solución posible:
+
+.. literalinclude:: programas/moda-2.f95
+
 .. include:: disqus.rst
 
