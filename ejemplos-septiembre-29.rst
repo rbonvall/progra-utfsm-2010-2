@@ -54,32 +54,25 @@ Lo que haremos será crear un arreglo de tamaño 26
 para evitar problemas con Fortran)
 que llamaremos ``frecuencias``.
 
-A continuación
-podemos escribir la sección principal del programa
-y luego encargarnos de los subprogramas::
+El programa lo terminaremos en la próxima clase.
 
-    program cuenta_letras
-        implicit none
-        character(len=50) :: oracion
-        integer, dimension(26) :: frecuencias
-        integer :: i
+**Actualizado**: el programa terminado es el siguiente:
 
-        print *, 'Ingrese una oracion'
-        read '(A)', oracion
-        frecuencias = contar_letras(oracion)
-        do i = 1, 26
-            if (frecuencias(i) > 0) then
-                print *, letra(i), frecuencias(i)
-            end if
-        end do
+.. literalinclude:: programas/cuenta-letras.f95
 
-    contains
+La función ``iachar`` recibe un caracter
+y entrega como resultado el `código ASCII`_ asociado a él.
+La función ``achar`` es su inversa:
+recibe un número y entrega como resultado el caracter asociado.
 
-        ! ...
+.. _código ASCII: http://es.wikipedia.org/wiki/ASCII#Caracteres_imprimibles_ASCII
 
-    end program cuenta_letras
-
-Este problema lo terminaremos en la próxima clase.
+El código ASCII es una asociación entre símbolos y números
+usada internamente por el computador para representar caracteres.
+Tiene la propiedad de que las letras del alfabeto están ordenadas
+y consecutivas, tanto las mayúsculas como las minúsculas,
+por lo que se puede saber la posición en el alfabeto de una letra
+simplemente restándole el código de la letra «a» más uno.
 
 .. include:: disqus.rst
 
