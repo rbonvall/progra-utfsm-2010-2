@@ -7,11 +7,15 @@ program registro_fecha
         integer :: anno
     end type fecha
 
-    type(fecha) :: hoy
+    type(fecha) :: hoy, mannana
 
     hoy%dia = 18
     hoy%mes = 10
     hoy%anno = 2010
 
-    print *, 'Hoy es', hoy%dia, '/', hoy%mes, '/', hoy%anno
+    mannana = hoy
+    mannana%dia = mannana%dia + 1
+
+    print *, 'Hoy es', hoy
+    print *, 'Man~ana es', mannana
 end program registro_fecha
