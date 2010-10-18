@@ -14,7 +14,7 @@ program registro_alumno
         integer, dimension(3) :: notas
     end type alumno
 
-    type(alumno) :: a
+    type(alumno) :: a, b
 
     a%nombre = 'Perico'
     a%apellido = 'Los Palotes'
@@ -25,5 +25,8 @@ program registro_alumno
     a%notas(2) = 20
     a%notas(3) = 55
 
+    b = alumno('Fulanita', 'De Tal', fecha(12, 10, 1991), (/50, 12, 95/))
+
     print *, a
+    print *, b
 end program registro_alumno
