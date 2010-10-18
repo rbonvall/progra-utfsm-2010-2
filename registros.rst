@@ -99,6 +99,29 @@ para `inicializar arreglos`_).
 
 .. _inicializar arreglos: http://csrg.inf.utfsm.cl/~rbonvall/progra-utfsm-2010-2/arreglos.html#inicializacion-de-arreglos
 
+Entrada y salida de registros
+-----------------------------
+Una ventaja adicional de usar registros
+es que todos los campos pueden ser leídos (con ``read``)
+y mostrados (con ``print``) en una única sentencia::
+
+    print *, 'Ingrese datos del alumno:'
+    read *, a
+    print *, 'Los datos son:'
+    print *, a
+
+Al ejecutar el programa,
+la sesión se verá así:
+
+.. code-block:: none
+
+     Ingrese datos del alumno:
+    Perico LosPalotes  4 12 1990  97 20 55
+     Los datos son:
+    Perico LosPalotes 4 12 1990 97 20 55
+
+La entrada debe hacerse separando los valores mediante espacios.
+
 Arreglos de registros
 ---------------------
 Los arreglos de registros son útiles
@@ -126,6 +149,10 @@ podemos obtener todos los datos sobre alumnos específicos:
 * el nombre completo del vigésimo cuarto alumno::
 
       trim(alumnos(24) % nombre) // trim(alumnos(24) % apellido)
+
+* el promedio del duodécimo alumno::
+
+      sum(alumnos(12) % notas) / 3.0
 
 .. include:: disqus.rst
 
