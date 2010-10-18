@@ -21,11 +21,6 @@ Programación, 2do semestre de 2010
     El segundo laboratorio evaluado
     fue `aplazado una semana <http://programacion.inf.utfsm.cl/wp/2010/10/13/cambio-calendarizacion-laboratorio-evaluado/>`_.
 
-.. note::
-
-    Revisen las
-    `indicaciones y salas del certamen 2 <http://programacion.inf.utfsm.cl/wp/2010/10/14/recordatorios-y-asignacion-de-salas-c1/>`_.
-
 Contenidos del ramo
 -------------------
 
