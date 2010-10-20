@@ -21,6 +21,10 @@ Programación, 2do semestre de 2010
     El segundo laboratorio evaluado
     fue `aplazado una semana <http://programacion.inf.utfsm.cl/wp/2010/10/13/cambio-calendarizacion-laboratorio-evaluado/>`_.
 
+.. note::
+
+    El control 5 será el **miércoles 3 de noviembre**.
+
 Contenidos del ramo
 -------------------
 
