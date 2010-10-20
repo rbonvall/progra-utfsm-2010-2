@@ -58,6 +58,7 @@ Contenidos del ramo
    ejercicios-octubre-6
    ejercicios-c2
    registros
+   ejemplos-octubre-20
 
 Calendario del curso
 --------------------
