@@ -30,7 +30,7 @@ program tabla_alumnos
     end do
 
     print *
-    print *, 'El promedio del certamen 1 fue', sum(alumnos(:) % notas(1)) / N
+    print *, 'La mejor nota del certamen 1 fue', maxval(alumnos(:) % notas(1))
 
     read *
 end program tabla_alumnos
