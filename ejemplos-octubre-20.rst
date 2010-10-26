@@ -66,14 +66,57 @@ Días entre fechas
 **Problema**: escriba una función que reciba como parámetros dos fechas,
 y entregue como resultado la cantidad de días que hay entre ambas fechas.
 
-(por redactar)
+La manera fácil de resolver este problema
+es reutilizando la función ``dia_siguiente``.
+Partiendo del día inicial,
+avanzar la fecha día por día hasta llegar al día final,
+llevando la cuenta de los días.
+
+La parte importante del código de la función es::
+
+    n = 0
+    f = fecha_inicial
+    do while (.not. fechas_iguales(f, fecha_final))
+        f = dia_siguiente(f)
+        n = n + 1
+    end do
+
+Es importante asegurarse que
+la fecha inicial ocurra antes de la fecha final.
+Si no es así,
+el ciclo nunca terminará,
+y el programa se quedará pegado.
 
 Orden entre fechas
 ------------------
 **Problema**: escriba una función que reciba como parámetros dos fechas,
 e indique si la primera fecha ocurre antes que la segunda.
 
-(por redactar)
+Para comparar qué fecha ocurre primero,
+lo primero que hay que hacer es comparar los años.
+Si éstos son distintos, entonces la respuesta es obvia:
+la fecha con menor año ocurrió antes,
+independientemente del día y del mes de ambas fechas.
+
+Sólo si los años coinciden,
+entonces hay que comparar los meses.
+Si son distintos, la fecha con el mes menor ocurrió antes.
+Si son iguales, hay que continuar comparando los días.
+
+El código de la función es::
+
+    function fecha_menor_que(f1, f2) result(m)
+        type(fecha), intent(in) :: f1, f2
+        logical :: m
+
+        if (f1 % anno /= f2 % anno) then
+            m = (f1 % anno < f2 % anno)
+        else if (f1 % mes /= f2 % mes) then
+            m = (f1 % mes < f2 % mes)
+        else
+            m = (f1 % dia < f2 % dia)
+        end if
+    end function fecha_menor_que
 
 Días de edad
 ------------
