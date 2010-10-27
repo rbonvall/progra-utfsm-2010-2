@@ -73,7 +73,7 @@ program supermercado
 
     ! Ejercicios:
     ! 1. obtener producto mas caro
-    ! 2. obtener valor total de todos los productos
+    ! 2. obtener valor total de todos los productos (sumar cantidad * precio)
     ! 3. obtener ingresos totales por ventas
     ! 4. obtener producto con mayores ingresos
     ! 5. mostrar nombre del cliente que mas ha pagado
@@ -81,6 +81,36 @@ program supermercado
     ! 7. ingresar mes y anno, mostrar ventas totales del mes
     ! 8. ingresar codigo producto, mostrar ultima fecha en que fue vendido
 
+    type(producto) :: p
+    type(cliente) :: c
+    type(fecha) :: f
+    integer :: mes, anno, cod_prod
+
+    p = producto_mas_caro(productos)
+    print *, 'El producto mas caro es ', p % nombre
+
+    print *, 'El valor total de los productos es ', valor_total(productos)
+
+    print *, 'El ingreso total por ventas es ', ingreso_ventas(itemes, productos)
+
+    p = producto_con_mayor_ingreso(productos)
+    print *, 'El producto con mas ingresos es ', p % nombre
+
+    c = cliente_que_mas_pago(itemes, productos, clientes)
+    print *, 'El cliente que mas pago es ', c % nombre
+
+    print *, 'Ingrese mes y an~o:'
+    read *, mes, anno
+    print *, 'El total de ventas del mes es ', &
+             ingreso_ventas_mes(mes, anno, itemes, productos)
+
+    print *, 'Ingrese codigo producto:'
+    read *, cod_prod
+    f = fecha_ultima_compra(cod_prod, itemes)
+    print *, 'El producto fue vendido por ultima vez el ', f
+
 contains
+
+    ! ...
 
 end program supermercado
