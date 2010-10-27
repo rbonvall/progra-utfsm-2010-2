@@ -22,6 +22,7 @@ program poker
         else
             print *, 'No es nada'
         end if
+        print *
     end do
 
 contains
@@ -58,7 +59,7 @@ contains
     function contar_valores(mano) result(cuentas)
         type(carta), dimension(:) :: mano
         integer, dimension(13) :: cuentas
-        integer :: i, numero_punta
+        integer :: i
 
         cuentas = 0
         do i = 1, size(mano)
