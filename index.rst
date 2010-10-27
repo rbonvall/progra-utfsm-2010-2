@@ -59,6 +59,7 @@ Contenidos del ramo
    registros
    ejemplos-octubre-20
    ejemplos-octubre-25
+   ejemplos-octubre-27
 
 Calendario del curso
 --------------------
