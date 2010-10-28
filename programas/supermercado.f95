@@ -93,7 +93,7 @@ program supermercado
 
     print *, 'El ingreso total por ventas es ', ingreso_ventas(itemes, productos)
 
-    p = producto_con_mayor_ingreso(productos)
+    p = producto_con_mayor_ingreso(productos, itemes)
     print *, 'El producto con mas ingresos es ', p % nombre
 
     c = cliente_que_mas_pago(itemes, productos, clientes)
@@ -111,6 +111,53 @@ program supermercado
 
 contains
 
-    ! ...
+    function producto_mas_caro(ps) result(p)
+        type(producto), dimension(:), intent(in) :: ps
+        type(producto) :: p
+        ! ...
+    end function producto_mas_caro
+
+    function valor_total(ps) result(vt)
+        type(producto), dimension(:), intent(in) :: ps
+        integer :: vt
+        ! ...
+    end function valor_total
+
+    function ingreso_ventas(is, ps) result(iv)
+        type(producto), dimension(:), intent(in) :: ps
+        type(item_venta), dimension(:), intent(in) :: is
+        integer :: iv
+        ! ...
+    end function ingreso_ventas
+
+    function producto_con_mayor_ingreso(ps, is) result(p)
+        type(producto), dimension(:), intent(in) :: ps
+        type(item_venta), dimension(:), intent(in) :: is
+        type(producto) :: p
+        ! ...
+    end function producto_con_mayor_ingreso
+
+    function cliente_que_mas_pago(is, ps, cs) result(c)
+        type(item_venta), dimension(:), intent(in) :: is
+        type(producto), dimension(:), intent(in) :: ps
+        type(cliente), dimension(:), intent(in) :: cs
+        type(cliente) :: c
+        ! ...
+    end function cliente_que_mas_pago
+
+    function ingreso_ventas_mes(mes, anno, is, ps) result(ivm)
+        integer, intent(in) :: mes, anno
+        type(item_venta), dimension(:), intent(in) :: is
+        type(producto), dimension(:), intent(in) :: ps
+        integer :: ivm
+        ! ...
+    end function ingreso_ventas_mes
+
+    function fecha_ultima_compra(cod_prod, is) result(f)
+        integer, intent(in) :: cod_prod
+        type(item_venta), dimension(:), intent(in) :: is
+        type(fecha) :: f
+        ! ...
+        end function fecha_ultima_compra
 
 end program supermercado
