@@ -15,6 +15,7 @@ extensions = [
     #'sphinx.ext.pngmath',
     'sphinx.ext.jsmath',
     'modules.fortran',
+    'modules.extra_texescape',
 ]
 
 templates_path = ['_templates']
