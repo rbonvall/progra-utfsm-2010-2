@@ -75,6 +75,11 @@ latex:
 	@echo "Run \`make all-pdf' or \`make all-ps' in that directory to" \
 	      "run these through (pdf)latex."
 
+pdf:
+	$(SPHINXBUILD) -b pdf $(ALLSPHINXOPTS) _build/pdf
+	@echo
+	@echo "Build finished; the PDF files are in _build/pdf."
+
 changes:
 	$(SPHINXBUILD) -b changes $(ALLSPHINXOPTS) _build/changes
 	@echo
