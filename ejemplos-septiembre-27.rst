@@ -41,18 +41,20 @@ El ruteo es el siguiente:
 
 .. code-block:: none
 
-    | Globales  | Locales         |
-    |           | intercambio     |
-
-    |  x  |  y  |  a  |  b  |  t  | Salida
-
-    |  2  |     |xxxxx|xxxxx|xxxxx|
-    |     |  5  |xxxxx|xxxxx|xxxxx|
-    |     |     |  2  |  5  |     |
-    |     |     |     |     |  2  |
-    |  5  |     |  5  |     |     |
-    |     |  2  |     |  2  |     |
-    |     |     |xxxxx|xxxxx|xxxxx| 5 2
+    ┌───────────┬─────────────────┐
+    │ Globales  │ Locales         │
+    │           │ intercambio     │
+    ├─────┬─────┼─────┬─────┬─────┼────────┐
+    │  x  │  y  │  a  │  b  │  t  │ Salida │
+    ┝━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━━━━┥
+    │  2  │     │░░░░░│░░░░░│░░░░░│        │
+    │     │  5  │░░░░░│░░░░░│░░░░░│        │
+    │     │     │  2  │  5  │     │        │
+    │     │     │     │     │  2  │        │
+    │  5  │     │  5  │     │     │        │
+    │     │  2  │     │  2  │     │        │
+    │     │     │░░░░░│░░░░░│░░░░░│ 5 2    │
+    └─────┴─────┴─────┴─────┴─────┴────────┘
 
 Como los parámetros ``a`` y ``b`` están declarados con ``intent(in out)``,
 quedan ligados respectivamente a las variables ``x`` e ``y``,
@@ -61,7 +63,7 @@ se ven reflejadas simultáneamente en los valores de ``x`` e ``y``.
 
 Las variables locales sólo existen durante la llamada del subprograma.
 Para indicar los instantes en que las variables no existen,
-he rellenado las casillas correspondientes con ``xxxxxx``.
+he rellenado las casillas correspondientes con ``░░░░░``.
 No es necesario hacer esto en certámenes y controles.
 
 
@@ -75,43 +77,45 @@ El ruteo es el siguiente:
 
 .. code-block:: none
 
-    | Globales  | Locales comb    | Locales         |
-    |           |                 | factorial       |
-
-    |  m  |  n  |  m  |  n  |  c  |  p  |  f  |  i  | Salida
-
-    |   5 |   2 |xxxxx|xxxxx|xxxxx|xxxxx|xxxxx|xxxxx|
-    |     |     |   5 |   2 |     |xxxxx|xxxxx|xxxxx|
-    |     |     |     |     |     |   5 |     |     |
-    |     |     |     |     |     |     |   1 |     |
-    |     |     |     |     |     |     |     |   1 |
-    |     |     |     |     |     |     |   1 |     |
-    |     |     |     |     |     |     |     |   2 |
-    |     |     |     |     |     |     |   2 |     |
-    |     |     |     |     |     |     |     |   3 |
-    |     |     |     |     |     |     |   6 |     |
-    |     |     |     |     |     |     |     |   4 |
-    |     |     |     |     |     |     |  24 |     |
-    |     |     |     |     |     |     |     |   5 |
-    |     |     |     |     |     |     | 120 |     |
-    |     |     |     |     |     |xxxxx|xxxxx|xxxxx|
-    |     |     |     |     |     |   3 |     |     |
-    |     |     |     |     |     |     |   1 |     |
-    |     |     |     |     |     |     |     |   1 |
-    |     |     |     |     |     |     |   1 |     |
-    |     |     |     |     |     |     |     |   2 |
-    |     |     |     |     |     |     |   2 |     |
-    |     |     |     |     |     |     |     |   3 |
-    |     |     |     |     |     |     |   6 |     |
-    |     |     |     |     |     |xxxxx|xxxxx|xxxxx|
-    |     |     |     |     |     |   2 |     |     |
-    |     |     |     |     |     |     |   1 |     |
-    |     |     |     |     |     |     |     |   1 |
-    |     |     |     |     |     |     |   1 |     |
-    |     |     |     |     |     |     |     |   2 |
-    |     |     |     |     |     |     |   2 |     |
-    |     |     |     |     |  10 |xxxxx|xxxxx|xxxxx|
-    |     |     |xxxxx|xxxxx|xxxxx|xxxxx|xxxxx|xxxxx| C(m, n) = 10
+    ┌───────────┬─────────────────┬─────────────────┐
+    │ Globales  │ Locales comb    │ Locales         │
+    │           │                 │ factorial       │
+    ├─────┬─────┼─────┬─────┬─────┼─────┬─────┬─────┼──────────────┐
+    │  m  │  n  │  m  │  n  │  c  │  p  │  f  │  i  │ Salida       │
+    ┝━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━┿━━━━━━━━━━━━━━┥
+    │   5 │   2 │░░░░░│░░░░░│░░░░░│░░░░░│░░░░░│░░░░░│              │
+    │     │     │   5 │   2 │     │░░░░░│░░░░░│░░░░░│              │
+    │     │     │     │     │     │   5 │     │     │              │
+    │     │     │     │     │     │     │   1 │     │              │
+    │     │     │     │     │     │     │     │   1 │              │
+    │     │     │     │     │     │     │   1 │     │              │
+    │     │     │     │     │     │     │     │   2 │              │
+    │     │     │     │     │     │     │   2 │     │              │
+    │     │     │     │     │     │     │     │   3 │              │
+    │     │     │     │     │     │     │   6 │     │              │
+    │     │     │     │     │     │     │     │   4 │              │
+    │     │     │     │     │     │     │  24 │     │              │
+    │     │     │     │     │     │     │     │   5 │              │
+    │     │     │     │     │     │     │ 120 │     │              │
+    │     │     │     │     │     │░░░░░│░░░░░│░░░░░│              │
+    │     │     │     │     │     │   3 │     │     │              │
+    │     │     │     │     │     │     │   1 │     │              │
+    │     │     │     │     │     │     │     │   1 │              │
+    │     │     │     │     │     │     │   1 │     │              │
+    │     │     │     │     │     │     │     │   2 │              │
+    │     │     │     │     │     │     │   2 │     │              │
+    │     │     │     │     │     │     │     │   3 │              │
+    │     │     │     │     │     │     │   6 │     │              │
+    │     │     │     │     │     │░░░░░│░░░░░│░░░░░│              │
+    │     │     │     │     │     │   2 │     │     │              │
+    │     │     │     │     │     │     │   1 │     │              │
+    │     │     │     │     │     │     │     │   1 │              │
+    │     │     │     │     │     │     │   1 │     │              │
+    │     │     │     │     │     │     │     │   2 │              │
+    │     │     │     │     │     │     │   2 │     │              │
+    │     │     │     │     │  10 │░░░░░│░░░░░│░░░░░│              │
+    │     │     │░░░░░│░░░░░│░░░░░│░░░░░│░░░░░│░░░░░│ C(m, n) = 10 │
+    └─────┴─────┴─────┴─────┴─────┴─────┴─────┴─────┴──────────────┘
 
 Mediana
 -------

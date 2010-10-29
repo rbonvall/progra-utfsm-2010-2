@@ -154,14 +154,14 @@ los resultados de partidos se escriben en una tabla como ésta:
 .. code-block:: none
 
                   j =   1     2     3     4
-                     +-----+-----+-----+-----+
-                     | Esp | Sui | Hon | Chi |
-          +----------+-----+-----+-----+-----+
-    i = 1 | España   |       0-1   3-0   2-1 |
-        2 | Suiza    |             0-0   0-1 |
-        3 | Honduras |                   0-1 |
-        4 | Chile    |                       |
-          +----------+-----------------------+
+                     ┌─────┬─────┬─────┬─────┐
+                     │ Esp │ Sui │ Hon │ Chi │
+          ┌──────────┼─────┼─────┼─────┼─────┤
+    i = 1 │ España   │       0-1   3-0   2-1 │
+        2 │ Suiza    │             0-0   0-1 │
+        3 │ Honduras │                   0-1 │
+        4 │ Chile    │                       │
+          └──────────┴─────┴─────┴─────┴─────┘
 
 En un programa,
 esta tabla se puede representar en un arreglo de tres dimensiones.
