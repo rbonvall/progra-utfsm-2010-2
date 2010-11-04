@@ -16,6 +16,7 @@ extensions = [
     'sphinx.ext.jsmath',
     'modules.fortran',
     'modules.extra_texescape',
+    'rst2pdf.pdfbuilder',
 ]
 
 templates_path = ['_templates']
@@ -99,4 +100,9 @@ latex_elements = {
 #latex_appendices = []   # docs to append as appendix to all manuals
 
 latex_use_modindex = False
+
+pdf_documents = [
+  ('index', 'progra', 'progra', 'Roberto Bonvallet'),
+]
+pdf_stylesheets = ['sphinx', 'kerning', 'letter']
 
