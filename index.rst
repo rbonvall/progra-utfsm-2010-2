@@ -16,9 +16,6 @@ Programación, 2do semestre de 2010
 
 .. _Reglas y calendarización: http://programacion.inf.utfsm.cl/wp/general/
 
-.. note::
-
-    El control 5 será el **miércoles 3 de noviembre**.
 
 Contenidos del ramo
 -------------------
