@@ -41,7 +41,7 @@ Cada byte está formado por ocho bits_ (unos o ceros).
 Las diferentes combinaciones de los treinta y dos bits
 permiten representar `2^{32}` números diferentes.
 
-.. _bit: http://es.wikipedia.org/wiki/Bit
+.. _bits: http://es.wikipedia.org/wiki/Bit
 
 .. index:: archivo de registo
 
