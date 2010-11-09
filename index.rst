@@ -59,6 +59,7 @@ Contenidos del ramo
    ejemplos-octubre-27
    archivos
    archivos-de-texto
+   archivos-binarios
 
 Calendario del curso
 --------------------
