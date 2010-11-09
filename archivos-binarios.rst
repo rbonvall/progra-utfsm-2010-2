@@ -37,7 +37,7 @@ entonces los datos están organizados de la siguiente forma:
 Cada caja representa el contenido de un byte.
 Internamente,
 muchos computadores representan los números enteros usando cuatro bytes.
-Cada byte está formado por ocho bits_ (unos o ceros).
+Cada byte está formado por ocho `bits`_ (unos o ceros).
 Las diferentes combinaciones de los treinta y dos bits
 permiten representar `2^{32}` números diferentes.
 
