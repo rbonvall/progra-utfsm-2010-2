@@ -38,22 +38,21 @@ desde archivos creados por otros programas.
 .. _disco duro: http://es.wikipedia.org/wiki/Disco_duro
 .. _archivos: http://es.wikipedia.org/wiki/Archivo_(informática)
 
-Los dos tipos de archivo que veremos en el ramo son:
+Se puede clasificar los archivos
+según el formato con el que almacenan información.
 
-* Los **archivos de texto**,
-  que almacenan texto.
+* Los **archivos de texto** almacenan texto.
   Estos archivos pueden ser abiertos y modificados
   con un programa editor de texto,
   como el Bloc de Notas.
-* Los **archivos de registros**,
-  que almacenan una secuencia de datos del mismo tipo.
-  Estos archivos contienen los datos en el mismo formato
+* Los **archivos binarios**
+  almacenan datos usando la misma representación
   con que el computador los maneja internamente.
   Al ser abiertos con un editor de texto,
-  el contenido no es mostrado en un formato entendible por humanos.
+  el contenido no es entendible por humanos.
 
 Como convención,
-los archivos de registros tendrán extensión ``.dat``
+los archivos binarios tendrán extensión ``.dat``
 y los archivos de texto, ``.txt``.
 
 Manipulación de archivos
@@ -77,6 +76,7 @@ los pasos indicados a continuación.
 
    Los puntos suspensivos indican que hay varias opciones
    que dependen del uso que se desea darle al archivo.
+   Las opciones se muestran `mas abajo <#opciones-de-la-sentencia-open>`_.
 
    Los units 0, 5 y 6 no están disponibles,
    ya que suelen estar reservados por Fortran para uso interno.
@@ -107,31 +107,81 @@ los pasos indicados a continuación.
    ya que las escrituras a veces no son guardadas de inmediato en el archivo
    por motivos de eficiencia.
 
-.. .. index:: cursor (archivo)
-.. 
-.. Los datos de un archivo están almacenados secuencialmente,
-.. y en todo momento hay una posición específica del archivo
-.. (que denominaremos **cursor**)
-.. en la que se puede leer o escribir datos.
-.. 
-.. Al abrir el archivo con ``Reset`` o ``ReWrite``,
-.. el cursor es posicionado al comienzo del archivo.
-.. Cada vez que se hace una operación de escritura o lectura,
-.. el cursor es avanzado de manera automática
-.. a la posición inmediatamente después del dato leído o escrito.
-.. 
-.. .. index:: end-of-file, EOF, fin de archivo
-.. 
-.. Al final de todo archivo
-.. hay una marca especial llamada *end-of-file* (EOF)
-.. que indica el final del archivo.
-.. Si el cursor llega al EOF,
-.. la operación de leer un dato del archivo es inválida.
-.. Para saber si el cursor ha llegado al EOF,
-.. se utiliza la función ``EOF(archivoLogico)``.
-.. 
-.. La manera en que se leen y escriben datos del archivo
-.. dependen del tipo de archivo que se está utilizando.
+
+Posición en el archivo
+----------------------
+.. index:: posición (archivo)
+
+Los datos de un archivo están almacenados de manera secuencial,
+y deben ser leídos de esta manera.
+En todo archivo abierto, hay una única posición específica
+en la que se puede leer o escribir datos.
+
+Al abrir el archivo,
+esta posición está al comienzo del archivo,
+a no ser que sea abierto en modo ``append`` (que veremos más adelante).
+Cada vez que se hace una operación de lectura o escritura,
+**la posición es avanzada** de manera automática
+inmediatamente después del dato leído o escrito.
+
+.. index:: end-of-file, EOF, iostat
+
+Al final de todo archivo
+hay una marca especial llamada *end-of-file* (EOF)
+que indica el final del archivo.
+Si la posición de lectura llega al EOF,
+es ilegal leer un dato del archivo.
+Para saber si el cursor ha llegado al EOF,
+hay que usar una forma especial de la sentencia ``read``::
+
+    read (10, *, iostat=s), variable
+
+Al hacer la lectura,
+la variable entera ``s`` toma un valor que indica el estado de la operación.
+
+* Si ``s == 0``, entonces la lectura fue exitosa, y el valor leído
+  quedó guardado en ``variable``.
+* Si ``s < 0``, significa que la lectura fue hecha más allá del final del archivo,
+  por lo que ``variable`` no tiene ningún valor significativo.
+* Si ``s > 0``, ocurrió otro tipo de error.
+
+Opciones de la sentencia ``open``
+---------------------------------
+La sentencia ``open`` tiene dos argumentos obligatorios:
+
+* ``unit``: el número que será asociado al archivo durante el programa, y
+* ``file``: el nombre del archivo (un string).
+
+Los siguientes son opcionales, y dependen del uso que se desee darle al archivo.
+
+* **status**: restringe qué estado debe tener el archivo al momento de ser abierto.
+  Algunos de sus valores posibles son:
+
+  * ``status='old'``: el archivo por abrir debe existir,
+  * ``status='new'``: el archivo por abrir debe no existir,
+  * ``status='replace'``: si el archivo existe, será reemplazado (valor por omisión).
+
+* **form**: indica si el archivo es de texto (legible por humanos)
+  o binario (legible por el computador). Sus valores posibles son:
+
+  * ``form='formatted'``: archivo de texto (valor por omisión).
+  * ``form='unformatted'``: archivo binario.
+
+* **position**: indica cuál será la posición inicial de lectura o escritura
+  al abrir el archivo. Sus valores posibles son:
+
+  * ``position='rewind'``: posición al inicio del archivo (valor por omisión),
+  * ``position='append'``: posición al final del archivo.
+
+* **action**: indica qué tipo de operaciones serán realizadas sobre el archivo.
+  Sus valores posibles son:
+
+  * ``action='read'``: sólo se hará lecturas,
+  * ``action='write'``: sólo se hará escrituras,
+  * ``action='readwrite'``: se hará lecturas y escrituras (valor por omisión).
+
+Los valores por omisión son los que toma la opción
+cuando no es especificada explícitamente.
 
 .. include:: disqus.rst
 
