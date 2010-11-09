@@ -58,6 +58,7 @@ Contenidos del ramo
    ejemplos-octubre-25
    ejemplos-octubre-27
    archivos
+   archivos-de-texto
 
 Calendario del curso
 --------------------
