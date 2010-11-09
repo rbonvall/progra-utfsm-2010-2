@@ -76,7 +76,7 @@ los pasos indicados a continuación.
 
    Los puntos suspensivos indican que hay varias opciones
    que dependen del uso que se desea darle al archivo.
-   Las opciones se muestran `mas abajo <#opciones-de-la-sentencia-open>`_.
+   Las opciones se muestran `más abajo <#opciones-de-la-sentencia-open>`_.
 
    Los units 0, 5 y 6 no están disponibles,
    ya que suelen estar reservados por Fortran para uso interno.
