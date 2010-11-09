@@ -20,7 +20,7 @@ Si el archivo tiene el siguiente contenido:
     59 88 0
     0 -154 12
 
-el contenido está organizado de la siguiente forma:
+entonces los datos están organizados de la siguiente forma:
 
 .. code-block:: none
 
