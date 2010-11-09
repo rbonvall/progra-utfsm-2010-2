@@ -147,6 +147,8 @@ la variable entera ``s`` toma un valor que indica el estado de la operación.
 
 Opciones de la sentencia ``open``
 ---------------------------------
+.. index:: status, form, position, action, unit, file
+
 La sentencia ``open`` tiene dos argumentos obligatorios:
 
 * ``unit``: el número que será asociado al archivo durante el programa, y
