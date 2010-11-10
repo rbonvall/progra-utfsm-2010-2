@@ -92,22 +92,119 @@
     
 \end{frame}
 
+  %\begin{frame}
+  %    \frametitle{Ver ejemplos}
+  %\end{frame}
+
+  %\begin{frame}
+  %    \frametitle{Control 5}
+  %    \pause
+
+  %    Una canción tiene los siguientes datos: título, artista, álbum,
+  %    duración (en segundos), fecha de grabación (día, mes y año).
+
+  %    Escriba un programa que permita ingresar los datos de 100 canciones,
+  %    y a continuación
+  %    muestre los títulos de las canciones grabadas en abril. 
+
+  %    Use registros llamados \texttt{fecha} y \texttt{cancion}.
+  %\end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{Archivos de texto}
+    \begin{itemize}
+      \item Crear un archivo de texto (error si ya existe):
+        \begin{lstlisting}[gobble=8,frame=single]
+          open (unit=10, file='a.txt',           &
+                action='write', status='new')
+        \end{lstlisting}
+      \item Crear un archivo de texto (sobreescribir si ya existe):
+        \begin{lstlisting}[gobble=8,frame=single]
+          open (unit=11, file='b.txt',           &
+                action='write', status='old')
+        \end{lstlisting}
+      \item Abrir un archivo de texto para escribir al final de él:
+        \begin{lstlisting}[gobble=8,frame=single]
+          open (unit=12, file='c.txt',           &
+                action='write', position='append')
+        \end{lstlisting}
+      \item Abrir un archivo de texto para leer de él:
+        \begin{lstlisting}[gobble=8,frame=single]
+          open (unit=13, file='d.txt', action='read')
+        \end{lstlisting}
+    \end{itemize}
+    
+\end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{Tipos de archivos}
+    \begin{columns}
+      \column{0.5\textwidth}
+        Archivo de texto:\vspace{1ex}
+        \begin{Verbatim}
+          12478 91 -123
+          32 54 192
+          -277 10 90
+          12 1 4
+        \end{Verbatim}
+      \column{0.5\textwidth}
+        Archivo binario:\vspace{1ex}
+        \begin{tabular}{|r|r|r|}\hline
+          12478 & 91 & $-$123 \\\hline
+             32 & 54 &    192 \\\hline
+         $-$277 & 10 &     90 \\\hline
+             12 & \phantom{0000}1 & \phantom{0000}4 \\\hline
+        \end{tabular}
+    \end{columns}
+    \pause
+    \begin{columns}
+      \column{0.5\textwidth}
+        \begin{lstlisting}[gobble=10]
+          open(unit=10, &
+               file='a.txt')
+
+          read (10, *), x
+          write (10, *), x
+          close (10)
+        \end{lstlisting}
+      \column{0.5\textwidth}
+        \begin{lstlisting}[gobble=10]
+          open(unit=11,      &
+               file='a.dat', &
+               form='unformatted')
+          read (11), x
+          write (11), x
+          close (11)
+        \end{lstlisting}
+    \end{columns}
+
+\end{frame}
+
   \begin{frame}
-      \frametitle{Ver ejemplos}
+    \frametitle{Ejercicio}
+    Una asignatura tiene:
+    año, semestre, código, nombre, número de alumnos.
+    Escriba un programa
+    que pida al usuario los datos de asignaturas
+    y los agregue a un archivo binario \texttt{asignaturas.dat}.
   \end{frame}
 
   \begin{frame}
-      \frametitle{Control 5}
-      \pause
+    \frametitle{Ejercicio}
+    Escriba un programa que muestre los contenidos
+    del programa \texttt{asignaturas.dat}.
+  \end{frame}
 
-      Una canción tiene los siguientes datos: título, artista, álbum,
-      duración (en segundos), fecha de grabación (día, mes y año).
+  \begin{frame}
+    \frametitle{Ejercicio}
+    Escriba un programa que pida al usuario
+    un año, un semestre y un código,
+    y muestre el número de alumnos de esa asignatura.
+  \end{frame}
 
-      Escriba un programa que permita ingresar los datos de 100 canciones,
-      y a continuación
-      muestre los títulos de las canciones grabadas en abril. 
-
-      Use registros llamados \texttt{fecha} y \texttt{cancion}.
+  \begin{frame}
+    \frametitle{Ejercicio}
+    Escriba un programa que muestre los ramos del año 2010.
   \end{frame}
 
 \end{document}
