@@ -2,8 +2,8 @@
 import sphinx.util.texescape as te
 
 replacements = ur'''
-    ✓ v
-    ✗ X
+    ✓ \ding{51}
+    ✗ \ding{55}
     ⁰ \ensuremath{^{0}}
     ¹ \ensuremath{^{1}}
     ² \ensuremath{^{2}}
