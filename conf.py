@@ -95,6 +95,7 @@ latex_elements = {
         \usepackage{ucs}
         \usepackage[utf8x]{inputenc}''',
     'utf8extra': '',
+    'preamble': r'\usepackage{pifont}',
     #'preamble': '\\usepackage[spanish]{babel} \selectlanguage{spanish}',
 }
 
