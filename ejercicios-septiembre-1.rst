@@ -151,11 +151,9 @@ de los dos anteriores:
 
 .. math::
 
-    \begin{align}
-      F_0 &= 0 \\
-      F_1 &= 1 \\
-      F_k &= F_{k - 2} + F_{k - 1}, \quad k \ge 2
-    \end{align}
+    F_0 &= 0 \\
+    F_1 &= 1 \\
+    F_k &= F_{k - 2} + F_{k - 1}, \quad k \ge 2
 
 .. _números de Fibonacci: http://es.wikipedia.org/wiki/N%C3%BAmero_de_Fibonacci
 
