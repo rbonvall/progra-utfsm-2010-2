@@ -91,6 +91,10 @@ latex_documents = [
 latex_elements = {
     'fontpkg': '\\usepackage{mathpazo}',
     'pointsize': '12pt',
+    'inputenc': r'''
+        \usepackage{ucs}
+        \usepackage[utf8x]{inputenc}''',
+    'utf8extra': '',
     #'preamble': '\\usepackage[spanish]{babel} \selectlanguage{spanish}',
 }
 
