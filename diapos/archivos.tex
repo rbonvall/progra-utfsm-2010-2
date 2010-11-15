@@ -207,4 +207,26 @@
     Escriba un programa que muestre los ramos del año 2010.
   \end{frame}
 
+  \begin{frame}[fragile]
+    \frametitle{Ejercicio}
+    \small
+    Los datos del archivo \texttt{alumnos.dat} tienen esta estructura:
+    \begin{lstlisting}[basicstyle=\small,gobble=6]
+      type :: alumno
+          character(len=30) :: nombre, apellido
+          character :: genero       ! 'M' o 'F'
+          integer, dimension(3) :: notas
+      end type alumno
+    \end{lstlisting}
+    Se desea enviar una carta a cada alumno con el mensaje:
+    \begin{Verbatim}
+      Estimad[o/a] alumn[o/a],
+      usted ha [aprobado/reprobado]
+      con promedio [p].
+    \end{Verbatim}
+    Escriba un programa que cree las cartas
+    como archivos de texto llamados \texttt{carta-nombre-apellido.txt}.
+
+\end{frame}
+
 \end{document}
