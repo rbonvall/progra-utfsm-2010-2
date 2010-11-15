@@ -31,7 +31,7 @@ replacements = ur'''
     ┿ \textSFliv
     ┥ \textSFxix
     Δ D
-    ━ -
+    ━ \textSFxliii
     ░ \textshade
     ↵ \Pisymbol{psy}{191}
     ± \ensuremath{\pm}
