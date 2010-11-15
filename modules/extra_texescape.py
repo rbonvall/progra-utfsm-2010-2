@@ -16,15 +16,24 @@ replacements = ur'''
     ♣ \ensuremath{\clubsuit}
     ♦ \ensuremath{\diamondsuit}
     ♠ \ensuremath{\spadesuit}
-    ┌ +
-    ┬ +
-    ┐ +
-    └ +
-    ┴ +
-    ┘ +
-    │ \textbar{}
-    ─ -
+    ┌ \textSFi
+    ┬ \textSFvi
+    ┐ \textSFiii
+    ├ \textSFviii
+    ┼ \textSFv
+    ┤ \textSFix
+    └ \textSFii
+    ┴ \textSFvii
+    ┘ \textSFiv
+    ─ \textSFx
+    │ \textSFxi
+    ┝ \textSFxxxvi
+    ┿ \textSFliv
+    ┥ \textSFxix
     Δ D
+    ━ -
+    ░ \textshade
+    ↵ \Pisymbol{psy}{191}
     ± \ensuremath{\pm}
     − \ensuremath{-}
     ⌈ \ensuremath{\lceil}
