@@ -60,6 +60,7 @@ Contenidos del ramo
    archivos
    archivos-de-texto
    archivos-binarios
+   ejercicios-noviembre-15
 
 Calendario del curso
 --------------------
