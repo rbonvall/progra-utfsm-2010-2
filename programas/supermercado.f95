@@ -71,16 +71,6 @@ program supermercado
         item_venta(5, 89148,  2), &
         item_venta(5, 47470, 10) /)
 
-    ! Ejercicios:
-    ! 1. obtener producto mas caro
-    ! 2. obtener valor total de todos los productos (sumar cantidad * precio)
-    ! 3. obtener ingresos totales por ventas
-    ! 4. obtener producto con mayores ingresos
-    ! 5. mostrar nombre del cliente que mas ha pagado
-    ! 6. ingresar numero boleta, imprimir itemes vendidos en esa compra
-    ! 7. ingresar mes y anno, mostrar ventas totales del mes
-    ! 8. ingresar codigo producto, mostrar ultima fecha en que fue vendido
-
     type(producto) :: p
     type(cliente) :: c
     type(fecha) :: f
