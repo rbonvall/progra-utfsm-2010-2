@@ -80,3 +80,5 @@ que tenga para cada alumno la siguiente información:
 
 Este ejercicio queda de tarea.
 
+.. include:: disqus.rst
+
