@@ -7,7 +7,7 @@ En el entorno que se usa en el laboratorio
 hay un par de diferencias importantes:
 
 1. Silverfrost no tiene las subrutinas ``rename`` y ``unlink``.
-   Ustedes pueden crearlas pegando este código al final de su programa::
+   Usted puede crearlas pegando este código al final de su programa::
 
     contains
         subroutine rename(old, new)
