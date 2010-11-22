@@ -62,6 +62,7 @@ Contenidos del ramo
    archivos-binarios
    ejercicios-noviembre-15
    ejercicios-noviembre-17
+   diferencias-silverfrost
 
 Calendario del curso
 --------------------
