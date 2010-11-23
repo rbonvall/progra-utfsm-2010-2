@@ -1,0 +1,91 @@
+\documentclass[12pt]{beamer}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{palatino}
+\usepackage{fancyvrb}
+\usepackage{amsmath}
+\usepackage{graphics}
+
+\usecolortheme{crane}
+\usefonttheme{serif}
+
+\title{Ejercicios de archivos}
+\author{
+  Roberto Bonvallet \\
+  \url{roberto.bonvallet@usm.cl} \\
+  \url{http://progra.8o.cl}
+}
+
+\lstloadlanguages{fortran}
+\lstset{language=fortran,basicstyle=\small,%
+        morestring=[b]',stringstyle=\it,showstringspaces=false}
+\fvset{formatcom=\small,frame=single,gobble=6,commandchars=\\\{\}}
+
+\begin{document}
+  \begin{frame}
+    \maketitle
+  \end{frame}
+
+  \begin{frame}[fragile]
+    \frametitle{Ruteo certamen 3, primer semestre 2010}
+    Realice el ruteo del siguiente programa (\ldots),
+    considerando que los archivos
+    \texttt{alumnos.dat} y \texttt{rangos.txt}
+    tienen los siguientes datos:
+    \vspace{2ex}
+
+    \begin{columns}[t]
+      \column{0.6\textwidth}
+      \texttt{alumnos.dat}:
+      \begin{Verbatim}
+      Carola Oyanedel   25  F
+      Pedro Osorio      21  M
+      Alfonso Lira      19  M
+      Gabriela Veliz    18  F
+      Andres Fuentes    17  M
+      Paula Salazar     23  F
+      \end{Verbatim}
+      \column{0.4\textwidth}
+      \texttt{rangos.txt}:
+      \begin{Verbatim}
+      25  34
+      56  103
+      91  124
+      \end{Verbatim}
+    \end{columns}
+    \vspace{2ex}
+
+    Además, escriba cómo quedará el archivo \texttt{rangos.txt}
+    después de la ejecución del programa.
+
+\end{frame}
+
+  \begin{frame}
+    \frametitle{Pregunta 3, primer semestre 2010}
+    El Ministerio de Salud desea conocer la situación
+    del virus AH1N1 a nivel nacional.
+    Para ello cuenta con el archivo \texttt{ah1n1.dat}
+    con registros de tipo \texttt{influenza} (\ldots).
+
+    El ministerio desea realizar una nueva campaña de vacunación,
+    en la que cada hospital beneficiario
+    deberá vacunar el doble de lo realizado hasta el momento.
+    Sólo serán beneficiados aquellos hospitales
+    que tengan más de 10 infectados.
+
+    Escriba un programa que:
+    \begin{itemize}
+      \item muestre en pantalla el total nacional de infectados
+        y vacunados a partir del archivo \texttt{ah1n1.dat},
+      \item cree el archivo \texttt{vacunar.dat}
+        con registros de tipo \texttt{vacuna} (\ldots)
+        que tenga el nombre del hospital,
+        el número de vacunas que recibirá
+        y la ciudad.
+    \end{itemize}
+
+  \end{frame}
+
+\end{document}
