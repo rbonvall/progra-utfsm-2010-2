@@ -173,7 +173,14 @@ puede usar el siguiente código para crear un archivo de prueba::
 
 Mezcla de números
 -----------------
-(Por escribir)
+Los archivos ``a.txt`` y ``b.txt``
+tienen muchos números ordenados de menor a mayor.
+
+**Problema:** Escriba un programa que cree un archivo ``c.txt``
+que tenga la unión de los números de los archivos anteriores,
+y que también esté ordenado.
+
+(por subir)
 
 .. include:: disqus.rst
 
