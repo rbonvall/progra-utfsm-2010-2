@@ -15,7 +15,8 @@ program abanderado
     d2 = 0
     d3 = 0
 
-    open (unit=10, file='concurso.dat', form='unformatted', action='read')
+    open (unit=10, file='concurso.dat', &
+          form='unformatted', action='read')
     do
         read (10, iostat=st), ll
         if (st /= 0) exit
