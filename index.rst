@@ -63,6 +63,7 @@ Contenidos del ramo
    ejercicios-noviembre-15
    ejercicios-noviembre-17
    ejercicios-noviembre-22
+   ejercicios-noviembre-24
    diferencias-silverfrost
 
 Calendario del curso
