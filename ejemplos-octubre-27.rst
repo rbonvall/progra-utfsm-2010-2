@@ -66,7 +66,7 @@ es el siguiente:
 
 .. literalinclude:: programas/supermercado.f95
 
-(Ya pondré las soluciones).
+Escriba las funciones que resuelven los problemas planteados.
 
 .. include:: disqus.rst
 
