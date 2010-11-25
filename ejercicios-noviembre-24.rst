@@ -180,7 +180,39 @@ tienen muchos números ordenados de menor a mayor.
 que tenga la unión de los números de los archivos anteriores,
 y que también esté ordenado.
 
-(por subir)
+Este problema también es un poco diferente
+a los típicos ejercicios de archivos.
+Aquí tenemos que leer datos desde dos archivos en paralelo.
+En cada iteración,
+siempre hay disponible un dato proveniente de cada archivo.
+Hay que decidir cuál de ambos datos escribir en el tercer archivo,
+y luego leer un nuevo dato del archivo correspondiente.
+
+Otra dificultad radica en que
+uno de los archivos de entrada se va a terminar antes que el otro.
+En este caso,
+hay que seguir leyendo sólo del archivo al que le quedan datos,
+sin hacer comparaciones.
+
+La siguiente es una manera de resolver el problema:
+
+.. literalinclude:: programas/mezcla.f95
+
+Lo que se hace en cada iteración es lo siguiente:
+
+* si ambos archivos se acabaron, se termina el ciclo;
+* si se acabó el archivo A, se escribe el dato `b`
+  y se lee un nuevo dato desde el archivo B;
+* si se acabó el archivo B, se escribe el dato `a`
+  y se lee un nuevo dato desde el archivo A;
+* si llegamos a este punto, ninguno de los dos archivos se ha acabado;
+  entonces, escribimos el menor entre `a` y `b`, y se lee un nuevo dato
+  del archivo correspondiente.
+
+Ya que es necesario que siempre estén disponibles ambos datos (`a` y `b`)
+en cada iteración,
+es importante haber leído el primer valor de cada archivo
+antes de entrar al ciclo por primera vez.
 
 .. include:: disqus.rst
 
