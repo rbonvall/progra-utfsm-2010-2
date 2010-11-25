@@ -64,6 +64,7 @@ Contenidos del ramo
    ejercicios-noviembre-17
    ejercicios-noviembre-22
    ejercicios-noviembre-24
+   ejercicios-c3
    diferencias-silverfrost
 
 Calendario del curso
