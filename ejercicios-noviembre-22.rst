@@ -69,11 +69,68 @@ El archivo ``rangos.txt`` queda con el siguiente contenido al final:
 
 Vacunas AH1N1
 -------------
-(Por subir)
+El Ministerio de Salud desea conocer la situación
+del virus AH1N1 a nivel nacional.
+Para ello cuenta con el archivo ``ah1n1.dat``
+con registros de tipo ``influenza``::
+
+    type :: influenza
+        character(len=20) :: hospital
+        integer :: infectados
+        integer :: vacunados
+        character(len=20) :: ciudad
+    end type influenza
+
+**Problema:** escriba un programa que:
+
+* muestre por pantalla el total nacional de infectados
+  y vacunados a partir del archivo ``ah1n1.dat``;
+* cree el archivo ``vacunar.dat``
+  con registros de tipo ``vacuna``::
+
+    type :: vacuna
+        character(len=20) :: hospital
+        integer :: vacunas_por_recibir
+        character(len=20) :: ciudad
+    end type vacuna
+
+  que tenga el nombre del hospital,
+  el número de vacunas que éste recibirá,
+  y la ciudad.
 
 Control 6
 ---------
-(Por subir)
+Escriba un programa que muestre por pantalla
+los cinco mayores números
+contenidos en un archivo ``numeros.txt``.
+
+Ejemplo de archivo ``numeros.txt``:
+
+.. code-block:: none
+
+   123
+   34
+   356
+   3
+   5346
+   45
+   994
+   35
+   56
+
+Ejemplo de la salida correspondiente:
+
+.. code-block:: none
+
+   5346
+   994
+   356
+   123
+   56
+
+Suponga que todos los números son distintos
+y que el archivo tiene más de cinco números.
+No puede usar ni arreglos ni strings.
 
 .. include:: disqus.rst
 
