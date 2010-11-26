@@ -32,6 +32,35 @@ Indique cómo quedarán los archivos
 ``salida1.dat`` y ``salida2.dat``.
 
 
-(Ya subiré más ejercicios)
+
+Archivo de enteros
+------------------
+El archivo ``a.txt`` tiene una lista de números enteros.
+
+Escriba un programa que cree dos archivos
+``pares.txt`` e ``impares.txt``
+que tengan, respectivamente,
+los números pares e impares del archivo ``a.txt``.
+
+Escriba un programa que cree un archivo ``ordenados.txt``
+que tenga los números del archivo ``a.txt``
+ordenados de menor a mayor.
+
+Escriba un programa que cree un archivo ``severla.txt``
+que tenga los números de ``a.txt`` en orden inverso.
+
+Escriba un programa ``cuentas.txt``
+que indique cuántas veces aparece cada número
+del archivo ``a.txt``:
+
+.. code-block:: none
+
+    7: 5 veces
+    189: 12 veces
+    3: 1 vez
+    ...
+
+Para probar,
+puede descargar el archivo `a.txt <_static/a.txt>`_.
 
 .. include:: disqus.rst
