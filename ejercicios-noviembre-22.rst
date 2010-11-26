@@ -132,5 +132,11 @@ Suponga que todos los números son distintos
 y que el archivo tiene más de cinco números.
 No puede usar ni arreglos ni strings.
 
+**Solución**:
+
+.. literalinclude:: programas/pauta-q6.f95
+
+Rutee este programa para entender cómo funciona.
+
 .. include:: disqus.rst
 
