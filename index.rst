@@ -66,6 +66,7 @@ Contenidos del ramo
    ejercicios-noviembre-24
    ejercicios-c3
    diferencias-silverfrost
+   pauta-certamen-3
 
 Calendario del curso
 --------------------
