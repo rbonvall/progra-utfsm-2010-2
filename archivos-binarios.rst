@@ -65,17 +65,17 @@ Un archivo binario debe ser abierto usando la opción
 
 * Crear un nuevo archivo binario::
 
-    open (unit=10, file='a.txt', action='write', &
+    open (unit=10, file='a.dat', action='write', &
           status='new', form='unformatted')
 
 * Abrir un archivo binario para escribir al final de él::
 
-    open (unit=11, file='b.txt', action='write', &
+    open (unit=11, file='b.dat', action='write', &
           position='append', form='unformatted')
 
 * Abrir un archivo binario para leer de él::
 
-    open (unit=12, file='c.txt', action='read', &
+    open (unit=12, file='c.dat', action='read', &
           form='unformatted')
 
 Leer de un archivo binario
