@@ -3,8 +3,79 @@ Pauta del certamen 3
 
 Pregunta 1: ruteo
 -----------------
-(por subir)
+Realice el ruteo del siguiente programa,
+considerando que los archivos ``experimentos.dat`` y ``muestras.txt``
+contienen los datos indicados.
+Además, escriba cómo quedará el archivo ``resultados.dat``
+después de la ejecución del código.
 
+Archivo ``experimentos.dat``::
+
+    exp1  3
+    exp2  2
+    exp3  4
+
+Archivo ``muestras.txt``::
+
+    4
+    2
+    6
+    4
+    1
+    4
+    7
+    3
+    1
+
+Programa:
+
+.. literalinclude:: programas/2010-2-c3-ruteo.f95
+
+Solución del ruteo:
+
+.. code-block:: none
+
+    ┌─────────────────┐
+    │    ex % ...     │ 
+    ├────────┬────────┼───┬───┬──────────┐
+    │ nombre │ cant...│ x │ i │ Pantalla │
+    ├────────┼────────┼───┼───┼──────────┤
+    │ exp1   │      3 │   │   │          │
+    │        │        │   │   │ exp1     │
+    │        │        │   │   │ 3        │
+    │        │        │   │ 1 │          │
+    │        │        │ 4 │   │          │
+    │        │        │   │ 2 │          │
+    │        │        │ 2 │   │          │
+    │        │        │   │ 3 │          │
+    │        │        │ 6 │   │          │
+    │ exp2   │      2 │   │   │          │
+    │        │        │   │   │ exp2     │
+    │        │        │   │   │ 2        │
+    │        │        │   │ 1 │          │
+    │        │        │ 4 │   │          │
+    │        │        │   │ 2 │          │
+    │        │        │ 1 │   │          │
+    │ exp3   │      4 │   │   │          │
+    │        │        │   │   │ exp3     │
+    │        │        │   │   │ 4        │
+    │        │        │   │ 1 │          │
+    │        │        │ 4 │   │          │
+    │        │        │   │ 2 │          │
+    │        │        │ 7 │   │          │
+    │        │        │   │ 3 │          │
+    │        │        │ 3 │   │          │
+    │        │        │   │ 4 │          │
+    │        │        │ 1 │   │          │
+    └────────┴────────┴───┴───┴──────────┘
+
+Archivo ``resultados.txt``::
+
+    4
+    6
+    4
+    4
+    7
 
 Pregunta 2
 ----------
